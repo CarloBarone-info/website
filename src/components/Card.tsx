@@ -6,7 +6,7 @@ type ProjectCardProps = {
   link?: string;
 };
 
-export function ProjectCard({
+export function Card({
   title,
   description,
   impact,
