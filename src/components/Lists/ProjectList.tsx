@@ -1,5 +1,5 @@
-import { projects } from "../data/projects";
-import { ProjectCard } from "./Card";
+import { projects } from "../../data/projects";
+import { Card } from "../Card";
 
 export function ProjectList() {
   return (
@@ -8,7 +8,7 @@ export function ProjectList() {
 
       <div className="projectGrid">
         {projects.map((project) => (
-          <ProjectCard key={project.title} {...project} />
+          <Card key={project.title} {...project} />
         ))}
       </div>
     </section>

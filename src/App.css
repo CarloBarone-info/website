@@ -4,7 +4,11 @@ body {
   background: #f7f7f7;
   color: #1f1f1f;
 }
-
+.obs{
+  margin-top: 12px;
+  color: #999;
+  font-size: 0.9rem;
+}
 .page {
   padding: 24px;
 }
@@ -62,32 +66,41 @@ h1 {
   border: 1px solid #ddd;
 }
 
-.projects {
-  margin-top: 72px;
-}
-
-.projects h2 {
+.projects h2,
+.contacts h2, .experiences h2 {
   font-size: 2rem;
+  margin-bottom: 16px;
 }
 
-.projectGrid {
+.projectGrid, .experienceGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(1fr 1fr));
   gap: 24px;
 }
 
-.projectCard {
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 0.33fr));
+  gap: 24px;
+}
+
+.card {
   background: white;
   padding: 24px;
   border-radius: 18px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
 }
 
-.projectCard h3 {
-  margin-top: 0;
+.card h3 {
+  font-size: 1.50rem;
+  margin: 8px 0;
 }
-
-.projectCard p {
+.card h4 {
+  margin: 0 auto;
+}
+.card p {
   color: #555;
   line-height: 1.5;
 }
@@ -111,9 +124,10 @@ h1 {
   font-size: 0.85rem;
 }
 
-.projectCard a {
+.card a {
   color: #1f1f1f;
   font-weight: 700;
+  margin-top: auto;
 }
 
 .nav {
