@@ -1,0 +1,36 @@
+.projectPage {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 64px 24px 120px;
+}
+
+.projectHeader {
+  margin-bottom: 96px;
+}
+
+.projectHeader h1 {
+  margin-bottom: 24px;
+}
+
+.projectSubtitle {
+  max-width: 620px;
+  color: #666;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.projectParagraph {
+  margin-bottom: 72px;
+}
+
+.projectParagraph h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 20px;
+}
+
+.projectText {
+  line-height: 1.8;
+  color: #333;
+}

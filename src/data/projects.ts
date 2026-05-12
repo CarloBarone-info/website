@@ -1,6 +1,7 @@
 export const projects = [
   {
     title: "This very website (code)",
+    slug: "personal-portfolio",
     date: "2026-",
     isProject: true,
     description:
@@ -12,6 +13,7 @@ export const projects = [
   },
   {
     title: "Music arrangements",
+    slug: "music-portfolio",
     date: "2023-",
     isProject: true,
     description:
@@ -23,6 +25,7 @@ export const projects = [
   },
    {
     title: "The Sonifying Hourglass",
+    slug: "sonifying-hourglass",
     date: "2021-2022",
     isProject: true,
     description:
@@ -34,6 +37,7 @@ export const projects = [
   },
   {
     title: "FicSon",
+    slug: "fictitious-soundscapes",
     date: "2020-2022",
     isProject: true,
     description:

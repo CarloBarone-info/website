@@ -1,4 +1,4 @@
-import type { CardProps } from "../types/CardProps";
+import type { CardProps } from "../types/props";
 import { Card } from "./Card";
 
 export function List (props: { data: CardProps[]; type: string }) {
@@ -14,4 +14,3 @@ export function List (props: { data: CardProps[]; type: string }) {
         </section>
       );
 }
-

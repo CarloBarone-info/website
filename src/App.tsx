@@ -4,6 +4,7 @@ import { Home } from "./pages/Home";
 import { ProjectsPage } from "./pages/ProjectsPage";
 import { ContactPage } from "./pages/ContactPage";
 import { ResumePage } from "./pages/ResumePage";
+import { SonifyingHourglass } from "./pages/projects/SonifyingHourglass";
 
 function App() {
   return (
@@ -21,6 +22,10 @@ function App() {
           <Route path="/resume" element={<ResumePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route
+            path="/projects/sonifying-hourglass"
+            element={<SonifyingHourglass />}
+          />
         </Routes>
       </main>
     </BrowserRouter>

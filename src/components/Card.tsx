@@ -1,7 +1,9 @@
-import type { CardProps } from "../types/CardProps";
+import { Link } from "react-router-dom";
+import type { CardProps } from "../types/props";
 
 export function Card({
   title,
+  slug,
   date,
   link,
   isProject,
@@ -26,11 +28,7 @@ export function Card({
           <div className="techList">
             {tech && tech.map((item) => <span key={item}>{item}</span>)}
           </div>
-          {link && (
-            <a href={link} target="_blank" rel="noreferrer">
-              View project →
-            </a>
-          )}
+          <Link to={`/projects/${slug}`}>View project →</Link>
         </>
       );
     } else if (isContact) {
