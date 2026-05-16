@@ -1,7 +1,7 @@
- import { Header } from "../components/projectPages/Header";
-import { ProjectCard } from "../components/projectPages/ProjectCard";
+ import { Header } from "../../components/projectPages/Header";
+import { ProjectCard } from "../../components/projectPages/ProjectCard";
 
-export function ProjectPage() {
+export function SonifyingHourglassPage() {
   return (
     <main className="projectPage">
       <Header
