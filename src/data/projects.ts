@@ -47,4 +47,16 @@ export const projects = [
     tech: ["Electronics", "Pure Data", "JavaScript", "DIY fabrication", "User-centered design", "Sound design", "Data sonification", "Accessibility"],
     link: "https://carlobarone.wixsite.com/main-page/fictitious-soundscapes",
   },
+  {
+    title: "Indie Film Music Contest 2026",
+    slug: "indie-film-music-contest-2026",
+    date: "2026",
+    isProject: true,
+    description:
+      "Participation in the Indie Film Music Contest 2026, showcasing original compositions for independent films.",
+    impact:
+      "Received recognition for creative sound design and contributed to the growing community of independent film composers.",
+    tech: ["Composition", "Sound Design", "Film Scoring"],
+    link: "https://carlobarone.wixsite.com/main-page/indie-film-music-contest-2026",
+  }
 ];

@@ -11,6 +11,11 @@ export function ProjectCard({
       <div className="projectText">
         {children}
       </div>
+      {children?.embedTag && (
+        <div className="projectEmbed">
+          {children.embedTag}
+        </div>
+      )}
     </section>
   );
 }
