@@ -5,6 +5,7 @@ import { ProjectsPage } from "./pages/ProjectsPage";
 import { ContactPage } from "./pages/ContactPage";
 import { ResumePage } from "./pages/ResumePage";
 import { SonifyingHourglassPage } from "./pages/projects/SonifyingHourglassPage";
+import { IndieFilmMusicContestPage } from "./pages/projects/IndieFilmMusicContestPage";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
           <Route
             path="/projects/sonifying-hourglass"
             element={<SonifyingHourglassPage />} />
+            <Route
+            path="/projects/indie-film-music-contest-2026"
+            element={<IndieFilmMusicContestPage />} />
         </Routes>
       </main>
     </BrowserRouter>
