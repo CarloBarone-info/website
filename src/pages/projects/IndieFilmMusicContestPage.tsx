@@ -27,6 +27,27 @@ const contents = [
       ></iframe>
     ),
   },
+  {
+    title: "Entry 2 - Live Action",
+    children: (
+      <>
+        <h4>
+          Film extract used with permission from Cameron Perry – A Grade
+          Students.
+        </h4>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/k1xd1L15KUU?si=el0vuKW_gR3nw4Tf"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        ></iframe>
+      </>
+    ),
+  },
 ];
 
 export function IndieFilmMusicContestPage() {
