@@ -25,10 +25,12 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route
             path="/projects/sonifying-hourglass"
-            element={<SonifyingHourglassPage />} />
-            <Route
-            path="/projects/indie-film-music-contest-2026"
-            element={<IndieFilmMusicContestPage />} />
+            element={<SonifyingHourglassPage />}
+          />
+          <Route
+            path="/projects/indie-film-music-contest"
+            element={<IndieFilmMusicContestPage />}
+          />
         </Routes>
       </main>
     </BrowserRouter>

@@ -23,7 +23,7 @@ export const projects = [
     tech: ["Music theory", "MuseScore", "Pop music", "Classical music", "Jazz"],
     link: "https://musescore.com/user/59610958",
   },
-   {
+  {
     title: "The Sonifying Hourglass",
     slug: "sonifying-hourglass",
     date: "2021-2022",
@@ -32,7 +32,15 @@ export const projects = [
       "This case study aimed create awareness about the level of air pollution in a closed environment",
     impact:
       "Created a tool to sonify this information, which was presented at Sound and Music Computing conference 2022.",
-    tech: ["Electronics", "Pure Data", "Arduino", "DIY fabrication", "User-centered design", "Sound design", "Data sonification"],
+    tech: [
+      "Electronics",
+      "Pure Data",
+      "Arduino",
+      "DIY fabrication",
+      "User-centered design",
+      "Sound design",
+      "Data sonification",
+    ],
     link: "https://carlobarone.wixsite.com/main-page/sonifying-hourglass",
   },
   {
@@ -44,12 +52,21 @@ export const projects = [
       "Master Thesis Project: A collection of soundscapes created using sound design techniques to evaluate the impact on it on a hearing-impaired user group.",
     impact:
       "Exposed at Tekniska Museet in Stockholm, Sweden, and provided valuable insights into the use of sound design for accessibility.",
-    tech: ["Electronics", "Pure Data", "JavaScript", "DIY fabrication", "User-centered design", "Sound design", "Data sonification", "Accessibility"],
+    tech: [
+      "Electronics",
+      "Pure Data",
+      "JavaScript",
+      "DIY fabrication",
+      "User-centered design",
+      "Sound design",
+      "Data sonification",
+      "Accessibility",
+    ],
     link: "https://carlobarone.wixsite.com/main-page/fictitious-soundscapes",
   },
   {
     title: "Indie Film Music Contest 2026",
-    slug: "indie-film-music-contest-2026",
+    slug: "indie-film-music-contest",
     date: "2026",
     isProject: true,
     description:
@@ -58,5 +75,5 @@ export const projects = [
       "Received recognition for creative sound design and contributed to the growing community of independent film composers.",
     tech: ["Composition", "Sound Design", "Film Scoring"],
     link: "https://carlobarone.wixsite.com/main-page/indie-film-music-contest-2026",
-  }
+  },
 ];
