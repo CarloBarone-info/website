@@ -9,6 +9,7 @@ export type CardProps = {
   description?: string;
   impact?: string;
   tech?: string[];
+  embedTag?: React.ReactNode;
 };
 
 export type ProjectCardProps = {
