@@ -7,6 +7,7 @@ export function Card({
   date,
   link,
   isProject,
+  isLocalProject = false,
   isContact,
   isExperience,
   description,
@@ -15,6 +16,7 @@ export function Card({
 }: CardProps) {
   const renderCard = (
     isProject: boolean,
+    isLocalProject: boolean,
     isContact: boolean,
     isExperience: boolean,
   ) => {
@@ -28,7 +30,17 @@ export function Card({
           <div className="techList">
             {tech && tech.map((item) => <span key={item}>{item}</span>)}
           </div>
-          <Link to={`/projects/${slug}`}>View project →</Link>
+          {isLocalProject ? (
+            <Link to={`/projects/${slug}`}>View project →</Link>
+          ) : (
+            <a
+              href={link}
+              target={link && link.startsWith("http") ? "_blank" : undefined}
+              rel={link && link.startsWith("http") ? "noreferrer" : undefined}
+            >
+              {title}
+            </a>
+          )}
         </>
       );
     } else if (isContact) {
@@ -66,6 +78,7 @@ export function Card({
     <article className="card">
       {renderCard(
         isProject || false,
+        isLocalProject,
         isContact || false,
         isExperience || false,
       )}

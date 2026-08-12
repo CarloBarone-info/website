@@ -4,6 +4,7 @@ export type CardProps = {
   date?: string;
   link?: string;
   isProject?: boolean;
+  isLocalProject?: boolean;
   isContact?: boolean;
   isExperience?: boolean;
   description?: string;

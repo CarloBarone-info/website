@@ -69,6 +69,7 @@ export const projects = [
     slug: "indie-film-music-contest",
     date: "2026",
     isProject: true,
+    isLocalProject: true,
     description:
       "Participation in the Indie Film Music Contest 2026, showcasing original compositions for independent films.",
     impact:
