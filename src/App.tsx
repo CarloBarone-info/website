@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { HashRouter, Routes, Route, Link } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { ProjectsPage } from "./pages/ProjectsPage";
 import { ContactPage } from "./pages/ContactPage";
@@ -9,7 +9,7 @@ import { IndieFilmMusicContestPage } from "./pages/projects/IndieFilmMusicContes
 
 function App() {
   return (
-    <BrowserRouter basename="/website">
+    <HashRouter>
       <main className="page">
         <nav className="nav">
           <Link to="/">Home</Link>
@@ -33,7 +33,7 @@ function App() {
           />
         </Routes>
       </main>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
