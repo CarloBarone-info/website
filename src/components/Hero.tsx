@@ -6,9 +6,20 @@ export function Hero() {
       <p className="intro">
         I build web projects with React, TypeScript/TSX, and modern development
         tools. This portfolio collects my projects, experiments, and learning
-        journey, together with my experience in music arrangements and compositions
+        journey, together with my experience in music arrangements and
+        compositions
       </p>
-      <p className="obs"><b>OBS!</b> This portfolio is a work in progress! Currently migrating from <a href="https://carlobarone.wixsite.com/main-page" target="_blank" rel="noopener noreferrer">my old website</a>.</p>
+      <p className="obs">
+        Currently migrating from{" "}
+        <a
+          href="https://carlobarone.wixsite.com/main-page"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          my old website
+        </a>
+        .
+      </p>
     </section>
   );
 }
