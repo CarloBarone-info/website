@@ -1,75 +1,76 @@
-# React + TypeScript + Vite
+# Carlo Barone — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the source code for my personal portfolio.
 
-Currently, two official plugins are available:
+I work at the intersection of **design and engineering**, with a focus on frontend development, UX, interaction design, and product thinking. The portfolio brings together selected projects that show how I approach problems from early exploration and prototyping through to implementation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Live portfolio:** https://carlobarone-info.github.io/website/
 
-## React Compiler
+## About
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+I'm Carlo Barone, a Design Engineer and Frontend Developer interested in building thoughtful, accessible digital products.
 
-Note: This will impact Vite dev & build performances.
+My background spans frontend development, UX design, interaction design, accessibility, creative technology, and sound. I enjoy working across disciplines—understanding a problem, exploring possible interactions, prototyping ideas, and turning them into polished experiences.
 
-## Expanding the ESLint configuration
+This portfolio is both a collection of that work and a frontend project in itself.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## What you'll find here
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+The portfolio includes work across:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Design Engineering** — bridging design decisions and implementation
+- **Frontend Development** — building responsive, maintainable interfaces
+- **UX & Interaction Design** — researching, prototyping, testing, and refining experiences
+- **Product Thinking** — understanding user needs, constraints, priorities, and trade-offs
+- **Creative Technology** — exploring interaction through sound, physical computing, and experimental interfaces
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Tech stack
+
+The portfolio is built with:
+
+- React
+- TypeScript
+- Vite
+- React Router
+- CSS
+- GitHub Actions
+- GitHub Pages
+
+## Running locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/CarloBarone-info/website.git
+cd website
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Install the dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+## Deployment
+
+The site is deployed to GitHub Pages.
+
+Production builds are published from this repository using GitHub Actions.
+
+## Contact
+
+If you'd like to learn more about my work, background, or current projects, visit the portfolio:
+
+**https://carlobarone-info.github.io/website/**
