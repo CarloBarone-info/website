@@ -94,6 +94,49 @@
 }
 
 /*Separate pages*/
+.projects {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projectsHeader {
+  max-width: 760px;
+  margin-bottom: 72px;
+}
+
+.projectsHeader .eyebrow {
+  margin: 0 0 12px;
+}
+
+.projectsHeader h1 {
+  margin-bottom: 20px;
+}
+
+.projectsIntro {
+  color: #555;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.projectSection {
+  margin-bottom: 96px;
+}
+
+.projectSectionHeader {
+  max-width: 680px;
+  margin-bottom: 32px;
+}
+
+.projectSectionHeader h2 {
+  margin-bottom: 8px;
+}
+
+.projectSectionHeader p {
+  margin: 0;
+  color: #666;
+  line-height: 1.6;
+}
+
 .projects h2,
 .contacts h2,
 .experiences h2 {
