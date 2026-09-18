@@ -15,38 +15,17 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "The Sonifying Hourglass",
-    slug: "sonifying-hourglass",
-    date: "2021–2022",
-    isProject: true,
-    section: "selected-work",
-    description:
-      "A case study exploring how data sonification can make indoor air-pollution levels perceptible through sound and physical interaction.",
-    impact:
-      "Designed and built an interactive sonification prototype that was presented at the Sound and Music Computing Conference in 2022.",
-    tech: [
-      "Electronics",
-      "Pure Data",
-      "Arduino",
-      "DIY fabrication",
-      "User-centered design",
-      "Sound design",
-      "Data sonification",
-    ],
-    link: "https://carlobarone.wixsite.com/main-page/sonifying-hourglass",
-  },
-  {
-    title: "Personal portfolio",
+    title: "GitHub & portfolio",
     slug: "personal-portfolio",
     date: "2026–",
     isProject: true,
     section: "selected-work",
     description:
-      "A personal portfolio designed and built with React and TypeScript to present my work across design engineering, frontend development, UX, and product thinking.",
+      "A growing collection of frontend, design-engineering, and product work, including this React and TypeScript portfolio and other experiments and repositories.",
     impact:
-      "Built and deployed a responsive portfolio with an automated deployment workflow through GitHub Actions and GitHub Pages.",
-    tech: ["React", "TypeScript", "Vite", "GitHub Actions", "GitHub Pages"],
-    link: "https://github.com/CarloBarone-info/website",
+      "Built this portfolio as a product in its own right, with responsive UI, testing, CI, and automated deployment, while using GitHub as the broader record of my technical work.",
+    tech: ["React", "TypeScript", "Vite", "Testing", "GitHub Actions"],
+    link: "https://github.com/CarloBarone-info",
   },
   {
     title: "FicSon",
@@ -69,6 +48,27 @@ export const projects: Project[] = [
       "Accessibility",
     ],
     link: "https://carlobarone.wixsite.com/main-page/fictitious-soundscapes",
+  },
+  {
+    title: "The Sonifying Hourglass",
+    slug: "sonifying-hourglass",
+    date: "2021–2022",
+    isProject: true,
+    section: "selected-work",
+    description:
+      "A case study exploring how data sonification can make indoor air-pollution levels perceptible through sound and physical interaction.",
+    impact:
+      "Designed and built an interactive sonification prototype that was presented at the Sound and Music Computing Conference in 2022.",
+    tech: [
+      "Electronics",
+      "Pure Data",
+      "Arduino",
+      "DIY fabrication",
+      "User-centered design",
+      "Sound design",
+      "Data sonification",
+    ],
+    link: "https://carlobarone.wixsite.com/main-page/sonifying-hourglass",
   },
   {
     title: "Music arrangements",
