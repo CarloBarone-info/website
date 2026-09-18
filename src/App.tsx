@@ -1,5 +1,5 @@
 import "./App.css";
-import { HashRouter, Routes, Route, Link } from "react-router-dom";
+import { HashRouter, Routes, Route, NavLink } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { ProjectsPage } from "./pages/ProjectsPage";
 import { ContactPage } from "./pages/ContactPage";
@@ -11,11 +11,13 @@ function App() {
   return (
     <HashRouter>
       <main className="page">
-        <nav className="nav">
-          <Link to="/">Home</Link>
-          <Link to="/resume">Resumé</Link>
-          <Link to="/projects">Projects</Link>
-          <Link to="/contact">Contact</Link>
+        <nav className="nav" aria-label="Primary navigation">
+          <NavLink to="/" end>
+            Home
+          </NavLink>
+          <NavLink to="/resume">Resumé</NavLink>
+          <NavLink to="/projects">Projects</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
         </nav>
 
         <Routes>
