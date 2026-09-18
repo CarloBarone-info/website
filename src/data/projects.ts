@@ -32,6 +32,7 @@ export const projects: Project[] = [
     slug: "fictitious-soundscapes",
     date: "2020–2022",
     isProject: true,
+    isLocalProject: true,
     section: "selected-work",
     description:
       "A master's thesis project using designed soundscapes to investigate how sound-design techniques are experienced by hearing-impaired users.",
