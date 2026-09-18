@@ -8,20 +8,21 @@ export function ProjectList() {
   return (
     <div className="projects">
       <header className="projectsHeader">
-        <p className="eyebrow">Work</p>
-        <h1>Selected projects</h1>
+        <p className="eyebrow">Portfolio</p>
+        <h1>Projects &amp; practice</h1>
         <p className="projectsIntro">
-          Work across design engineering, frontend development, interaction
-          design, accessibility, and creative technology.
+          A collection of professional, research, and creative work spanning
+          digital products, interaction design, accessibility, sound, and code.
         </p>
       </header>
 
       <section className="projectSection">
         <div className="projectSectionHeader">
-          <h2>Selected Work</h2>
+          <h2>Design &amp; Engineering</h2>
           <p>
-            Projects that best represent how I approach design, engineering,
-            and digital product development.
+            Case studies and builds that show how I frame problems, prototype
+            interactions, make technical trade-offs, and turn ideas into
+            working digital experiences.
           </p>
         </div>
 
@@ -36,8 +37,8 @@ export function ProjectList() {
         <div className="projectSectionHeader">
           <h2>Creative Practice</h2>
           <p>
-            Music, sound, and experimental work that informs my wider creative
-            practice.
+            Composition, sound, and experimental work that shapes how I think
+            about perception, storytelling, rhythm, and interaction.
           </p>
         </div>
 
