@@ -46,7 +46,7 @@ export function SonifyingHourglassPage() {
               Read the paper ↗
             </a>
             <a
-              href="https://youtu.be/aNTzjXqb5Js"
+              href="https://www.youtube.com/watch?v=hyWIo960J7M&t=1s"
               target="_blank"
               rel="noreferrer"
             >
@@ -175,7 +175,7 @@ export function SonifyingHourglassPage() {
           <h2>The interaction only makes sense when you hear it.</h2>
           <div className="hourglassVideo">
             <iframe
-              src="https://www.youtube.com/embed/aNTzjXqb5Js"
+              src="https://www.youtube.com/embed/hyWIo960J7M?start=1"
               title="The Sonifying Hourglass prototype demonstration"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
@@ -242,7 +242,7 @@ export function SonifyingHourglassPage() {
               KTH publication record ↗
             </a>
             <a
-              href="https://youtu.be/aNTzjXqb5Js"
+              href="https://www.youtube.com/watch?v=hyWIo960J7M&t=1s"
               target="_blank"
               rel="noreferrer"
             >
