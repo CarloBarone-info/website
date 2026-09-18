@@ -3,18 +3,16 @@ import {
   selectedWork,
 } from "../../data/projects";
 import { Card } from "../Card";
+import { PageHeader } from "../PageHeader";
 
 export function ProjectList() {
   return (
     <div className="projects">
-      <header className="projectsHeader">
-        <p className="eyebrow">Portfolio</p>
-        <h1>Projects &amp; practice</h1>
-        <p className="projectsIntro">
-          A collection of professional, research, and creative work spanning
-          digital products, interaction design, accessibility, sound, and code.
-        </p>
-      </header>
+      <PageHeader
+        eyebrow="Portfolio"
+        title="Projects & practice"
+        intro="A collection of professional, research, and creative work spanning digital products, interaction design, accessibility, sound, and code."
+      />
 
       <section className="projectSection">
         <div className="projectSectionHeader">
