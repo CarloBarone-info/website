@@ -101,7 +101,7 @@
 
 .projectsHeader {
   max-width: 760px;
-  margin-bottom: 72px;
+  margin: 0 auto 72px auto;
 }
 
 .projectsHeader .eyebrow {
@@ -124,7 +124,7 @@
 
 .projectSectionHeader {
   max-width: 680px;
-  margin-bottom: 32px;
+  margin: 0 auto 32px auto;
 }
 
 .projectSectionHeader h2 {
