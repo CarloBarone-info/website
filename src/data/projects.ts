@@ -15,6 +15,42 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "GitHub & portfolio",
+    slug: "personal-portfolio",
+    date: "2026–",
+    isProject: true,
+    section: "selected-work",
+    description:
+      "A growing collection of frontend, design-engineering, and product work, including this React and TypeScript portfolio and other experiments and repositories.",
+    impact:
+      "Built this portfolio as a product in its own right, with responsive UI, testing, CI, and automated deployment, while using GitHub as the broader record of my technical work.",
+    tech: ["React", "TypeScript", "Vite", "Testing", "GitHub Actions"],
+    link: "https://github.com/CarloBarone-info",
+  },
+  {
+    title: "FicSon",
+    slug: "fictitious-soundscapes",
+    date: "2020–2022",
+    isProject: true,
+    isLocalProject: true,
+    section: "selected-work",
+    description:
+      "A master's thesis project using designed soundscapes to investigate how sound-design techniques are experienced by hearing-impaired users.",
+    impact:
+      "The project was exhibited at Tekniska Museet in Stockholm and explored sound design through an accessibility-focused research process.",
+    tech: [
+      "Electronics",
+      "Pure Data",
+      "JavaScript",
+      "DIY fabrication",
+      "User-centered design",
+      "Sound design",
+      "Data sonification",
+      "Accessibility",
+    ],
+    link: "https://carlobarone.wixsite.com/main-page/fictitious-soundscapes",
+  },
+  {
     title: "The Sonifying Hourglass",
     slug: "sonifying-hourglass",
     date: "2021–2022",
@@ -34,41 +70,6 @@ export const projects: Project[] = [
       "Data sonification",
     ],
     link: "https://carlobarone.wixsite.com/main-page/sonifying-hourglass",
-  },
-  {
-    title: "Personal portfolio",
-    slug: "personal-portfolio",
-    date: "2026–",
-    isProject: true,
-    section: "selected-work",
-    description:
-      "A personal portfolio designed and built with React and TypeScript to present my work across design engineering, frontend development, UX, and product thinking.",
-    impact:
-      "Built and deployed a responsive portfolio with an automated deployment workflow through GitHub Actions and GitHub Pages.",
-    tech: ["React", "TypeScript", "Vite", "GitHub Actions", "GitHub Pages"],
-    link: "https://github.com/CarloBarone-info/website",
-  },
-  {
-    title: "FicSon",
-    slug: "fictitious-soundscapes",
-    date: "2020–2022",
-    isProject: true,
-    section: "selected-work",
-    description:
-      "A master's thesis project using designed soundscapes to investigate how sound-design techniques are experienced by hearing-impaired users.",
-    impact:
-      "The project was exhibited at Tekniska Museet in Stockholm and explored sound design through an accessibility-focused research process.",
-    tech: [
-      "Electronics",
-      "Pure Data",
-      "JavaScript",
-      "DIY fabrication",
-      "User-centered design",
-      "Sound design",
-      "Data sonification",
-      "Accessibility",
-    ],
-    link: "https://carlobarone.wixsite.com/main-page/fictitious-soundscapes",
   },
   {
     title: "Music arrangements",

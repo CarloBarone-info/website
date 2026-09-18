@@ -5,6 +5,7 @@ import { ProjectsPage } from "./pages/ProjectsPage";
 import { ContactPage } from "./pages/ContactPage";
 import { ResumePage } from "./pages/ResumePage";
 import { SonifyingHourglassPage } from "./pages/projects/SonifyingHourglassPage";
+import { FicSonPage } from "./pages/projects/FicSonPage";
 import { IndieFilmMusicContestPage } from "./pages/projects/IndieFilmMusicContestPage";
 import { SideNav } from "./components/SideNav";
 
@@ -19,6 +20,10 @@ function App() {
           <Route path="/resume" element={<ResumePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route
+            path="/projects/fictitious-soundscapes"
+            element={<FicSonPage />}
+          />
           <Route
             path="/projects/sonifying-hourglass"
             element={<SonifyingHourglassPage />}
