@@ -1,25 +1,19 @@
 import "./App.css";
-import { HashRouter, Routes, Route, NavLink } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { ProjectsPage } from "./pages/ProjectsPage";
 import { ContactPage } from "./pages/ContactPage";
 import { ResumePage } from "./pages/ResumePage";
 import { SonifyingHourglassPage } from "./pages/projects/SonifyingHourglassPage";
 import { IndieFilmMusicContestPage } from "./pages/projects/IndieFilmMusicContestPage";
+import { SideNav } from "./components/SideNav";
 
 function App() {
   return (
     <HashRouter>
-      <main className="page">
-        <nav className="nav" aria-label="Primary navigation">
-          <NavLink to="/" end>
-            Home
-          </NavLink>
-          <NavLink to="/resume">Resumé</NavLink>
-          <NavLink to="/projects">Projects</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
-        </nav>
+      <SideNav />
 
+      <main className="page">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/resume" element={<ResumePage />} />

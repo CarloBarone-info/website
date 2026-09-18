@@ -1,0 +1,114 @@
+import { useEffect, useRef, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
+
+export function SideNav() {
+  const [isOpen, setIsOpen] = useState(false);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const toggleButtonRef = useRef<HTMLButtonElement>(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    closeButtonRef.current?.focus();
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+        toggleButtonRef.current?.focus();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen]);
+
+  const closeMenu = () => {
+    setIsOpen(false);
+    toggleButtonRef.current?.focus();
+  };
+
+  return (
+    <>
+      <button
+        ref={toggleButtonRef}
+        type="button"
+        className="sideNavToggle"
+        aria-label="Open navigation"
+        aria-controls="site-navigation"
+        aria-expanded={isOpen}
+        onClick={() => setIsOpen(true)}
+      >
+        <span className="sideNavToggleIcon" aria-hidden="true">
+          <span />
+          <span />
+        </span>
+        <span>Menu</span>
+      </button>
+
+      <div
+        className={`sideNavBackdrop ${isOpen ? "isOpen" : ""}`}
+        aria-hidden="true"
+        onClick={closeMenu}
+      />
+
+      <aside
+        id="site-navigation"
+        className={`sideNav ${isOpen ? "isOpen" : ""}`}
+        aria-hidden={!isOpen}
+      >
+        <div className="sideNavHeader">
+          <div>
+            <p className="eyebrow">Navigation</p>
+            <p className="sideNavName">Carlo Barone</p>
+          </div>
+
+          <button
+            ref={closeButtonRef}
+            type="button"
+            className="sideNavClose"
+            aria-label="Close navigation"
+            tabIndex={isOpen ? 0 : -1}
+            onClick={closeMenu}
+          >
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+
+        <nav className="sideNavLinks" aria-label="Primary navigation">
+          <NavLink to="/" end tabIndex={isOpen ? 0 : -1}>
+            <span>01</span>
+            Home
+          </NavLink>
+          <NavLink to="/resume" tabIndex={isOpen ? 0 : -1}>
+            <span>02</span>
+            Resumé
+          </NavLink>
+          <NavLink to="/projects" tabIndex={isOpen ? 0 : -1}>
+            <span>03</span>
+            Projects
+          </NavLink>
+          <NavLink to="/contact" tabIndex={isOpen ? 0 : -1}>
+            <span>04</span>
+            Contact
+          </NavLink>
+        </nav>
+
+        <div className="sideNavFooter">
+          <p>Design · Engineering · Product</p>
+          <p>Stockholm, Sweden</p>
+        </div>
+      </aside>
+    </>
+  );
+}
