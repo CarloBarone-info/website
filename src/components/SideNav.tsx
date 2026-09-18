@@ -1,15 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export function SideNav() {
   const [isOpen, setIsOpen] = useState(false);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const toggleButtonRef = useRef<HTMLButtonElement>(null);
-  const location = useLocation();
-
-  useEffect(() => {
-    setIsOpen(false);
-  }, [location.pathname]);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -40,6 +35,10 @@ export function SideNav() {
   const closeMenu = () => {
     setIsOpen(false);
     toggleButtonRef.current?.focus();
+  };
+
+  const closeAfterNavigation = () => {
+    setIsOpen(false);
   };
 
   return (
@@ -91,19 +90,36 @@ export function SideNav() {
         </div>
 
         <nav className="sideNavLinks" aria-label="Primary navigation">
-          <NavLink to="/" end tabIndex={isOpen ? 0 : -1}>
+          <NavLink
+            to="/"
+            end
+            tabIndex={isOpen ? 0 : -1}
+            onClick={closeAfterNavigation}
+          >
             <span>01</span>
             Home
           </NavLink>
-          <NavLink to="/resume" tabIndex={isOpen ? 0 : -1}>
+          <NavLink
+            to="/resume"
+            tabIndex={isOpen ? 0 : -1}
+            onClick={closeAfterNavigation}
+          >
             <span>02</span>
             Resumé
           </NavLink>
-          <NavLink to="/projects" tabIndex={isOpen ? 0 : -1}>
+          <NavLink
+            to="/projects"
+            tabIndex={isOpen ? 0 : -1}
+            onClick={closeAfterNavigation}
+          >
             <span>03</span>
             Projects
           </NavLink>
-          <NavLink to="/contact" tabIndex={isOpen ? 0 : -1}>
+          <NavLink
+            to="/contact"
+            tabIndex={isOpen ? 0 : -1}
+            onClick={closeAfterNavigation}
+          >
             <span>04</span>
             Contact
           </NavLink>
