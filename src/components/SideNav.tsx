@@ -15,7 +15,10 @@ export function SideNav() {
     if (!isOpen) return;
 
     const previousOverflow = document.body.style.overflow;
+    const page = document.querySelector<HTMLElement>("main.page");
+
     document.body.style.overflow = "hidden";
+    page?.setAttribute("inert", "");
     closeButtonRef.current?.focus();
 
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -29,6 +32,7 @@ export function SideNav() {
 
     return () => {
       document.body.style.overflow = previousOverflow;
+      page?.removeAttribute("inert");
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, [isOpen]);
@@ -47,6 +51,7 @@ export function SideNav() {
         aria-label="Open navigation"
         aria-controls="site-navigation"
         aria-expanded={isOpen}
+        tabIndex={isOpen ? -1 : 0}
         onClick={() => setIsOpen(true)}
       >
         <span className="sideNavToggleIcon" aria-hidden="true">
