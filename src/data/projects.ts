@@ -1,33 +1,25 @@
-export const projects = [
-  {
-    title: "Personal portfolio",
-    slug: "personal-portfolio",
-    date: "2026–",
-    isProject: true,
-    description:
-      "A personal portfolio designed and built with React and TypeScript to present my work across design engineering, frontend development, UX, and product thinking.",
-    impact:
-      "Built and deployed a responsive portfolio with an automated deployment workflow through GitHub Actions and GitHub Pages.",
-    tech: ["React", "TypeScript", "Vite", "GitHub Actions", "GitHub Pages"],
-    link: "https://github.com/CarloBarone-info/website",
-  },
-  {
-    title: "Music arrangements",
-    slug: "music-portfolio",
-    date: "2023–",
-    isProject: true,
-    description:
-      "An ongoing collection of original compositions and arrangements across pop, classical, and jazz.",
-    impact:
-      "Built a growing body of composition and arrangement work exploring harmony, orchestration, and musical structure across different genres.",
-    tech: ["Music theory", "MuseScore", "Pop music", "Classical music", "Jazz"],
-    link: "https://musescore.com/user/59610958",
-  },
+export type ProjectSection = "selected-work" | "creative-practice";
+
+export type Project = {
+  title: string;
+  slug: string;
+  date: string;
+  isProject: boolean;
+  isLocalProject?: boolean;
+  section: ProjectSection;
+  description: string;
+  impact: string;
+  tech: string[];
+  link: string;
+};
+
+export const projects: Project[] = [
   {
     title: "The Sonifying Hourglass",
     slug: "sonifying-hourglass",
     date: "2021–2022",
     isProject: true,
+    section: "selected-work",
     description:
       "A case study exploring how data sonification can make indoor air-pollution levels perceptible through sound and physical interaction.",
     impact:
@@ -44,10 +36,24 @@ export const projects = [
     link: "https://carlobarone.wixsite.com/main-page/sonifying-hourglass",
   },
   {
+    title: "Personal portfolio",
+    slug: "personal-portfolio",
+    date: "2026–",
+    isProject: true,
+    section: "selected-work",
+    description:
+      "A personal portfolio designed and built with React and TypeScript to present my work across design engineering, frontend development, UX, and product thinking.",
+    impact:
+      "Built and deployed a responsive portfolio with an automated deployment workflow through GitHub Actions and GitHub Pages.",
+    tech: ["React", "TypeScript", "Vite", "GitHub Actions", "GitHub Pages"],
+    link: "https://github.com/CarloBarone-info/website",
+  },
+  {
     title: "FicSon",
     slug: "fictitious-soundscapes",
     date: "2020–2022",
     isProject: true,
+    section: "selected-work",
     description:
       "A master's thesis project using designed soundscapes to investigate how sound-design techniques are experienced by hearing-impaired users.",
     impact:
@@ -65,11 +71,25 @@ export const projects = [
     link: "https://carlobarone.wixsite.com/main-page/fictitious-soundscapes",
   },
   {
+    title: "Music arrangements",
+    slug: "music-portfolio",
+    date: "2023–",
+    isProject: true,
+    section: "creative-practice",
+    description:
+      "An ongoing collection of original compositions and arrangements across pop, classical, and jazz.",
+    impact:
+      "Built a growing body of composition and arrangement work exploring harmony, orchestration, and musical structure across different genres.",
+    tech: ["Music theory", "MuseScore", "Pop music", "Classical music", "Jazz"],
+    link: "https://musescore.com/user/59610958",
+  },
+  {
     title: "Indie Film Music Contest 2026",
     slug: "indie-film-music-contest",
     date: "2026",
     isProject: true,
     isLocalProject: true,
+    section: "creative-practice",
     description:
       "An original film-scoring submission created for the Indie Film Music Contest 2026.",
     impact:
@@ -78,3 +98,11 @@ export const projects = [
     link: "https://carlobarone.wixsite.com/main-page/indie-film-music-contest-2026",
   },
 ];
+
+export const selectedWork = projects.filter(
+  (project) => project.section === "selected-work",
+);
+
+export const creativePractice = projects.filter(
+  (project) => project.section === "creative-practice",
+);
