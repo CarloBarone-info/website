@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { NavIcon } from "./NavIcon";
 
 export function SideNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -96,7 +97,7 @@ export function SideNav() {
             tabIndex={isOpen ? 0 : -1}
             onClick={closeAfterNavigation}
           >
-            <span>01</span>
+            <NavIcon name="home" />
             Home
           </NavLink>
           <NavLink
@@ -104,7 +105,7 @@ export function SideNav() {
             tabIndex={isOpen ? 0 : -1}
             onClick={closeAfterNavigation}
           >
-            <span>02</span>
+            <NavIcon name="resume" />
             Resumé
           </NavLink>
           <NavLink
@@ -112,7 +113,7 @@ export function SideNav() {
             tabIndex={isOpen ? 0 : -1}
             onClick={closeAfterNavigation}
           >
-            <span>03</span>
+            <NavIcon name="projects" />
             Projects
           </NavLink>
           <NavLink
@@ -120,7 +121,7 @@ export function SideNav() {
             tabIndex={isOpen ? 0 : -1}
             onClick={closeAfterNavigation}
           >
-            <span>04</span>
+            <NavIcon name="contact" />
             Contact
           </NavLink>
         </nav>
