@@ -1,4 +1,7 @@
 import "../../styles/sonifyingHourglassPage.css";
+import sketchImage from "../../assets/projects/sonifying-hourglass/sketch.webp";
+import setupImage from "../../assets/projects/sonifying-hourglass/setup.webp";
+import finalModelImage from "../../assets/projects/sonifying-hourglass/final.webp";
 
 const soundModels = [
   {
@@ -62,21 +65,16 @@ export function SonifyingHourglassPage() {
           </div>
         </div>
 
-        <div className="hourglassObject" aria-hidden="true">
-          <div className="hourglassFrame">
-            <div className="hourglassBulb hourglassBulbTop">
-              <span />
-            </div>
-            <div className="hourglassNeck" />
-            <div className="hourglassBulb hourglassBulbBottom">
-              <span />
-            </div>
-          </div>
-          <div className="hourglassSignal">
-            <span>CO₂</span>
-            <strong>→ sound</strong>
-          </div>
-        </div>
+        <figure className="hourglassHeroMedia">
+          <img
+            src={finalModelImage}
+            alt="Finished Sonifying Hourglass prototype with Arduino and sensor electronics mounted beside the hourglass"
+          />
+          <figcaption>
+            The finished physical prototype: hourglass, Arduino, sensors, and
+            electronics integrated into one object.
+          </figcaption>
+        </figure>
       </header>
 
       <dl className="hourglassMeta" aria-label="Project overview">
@@ -119,7 +117,51 @@ export function SonifyingHourglassPage() {
         </section>
 
         <section className="hourglassSection">
-          <p className="hourglassSectionLabel">02 · Prototype</p>
+          <p className="hourglassSectionLabel">02 · Early concept</p>
+          <div className="hourglassConceptGrid">
+            <figure className="hourglassProcessImage">
+              <img
+                src={sketchImage}
+                alt="Early hand-drawn sketch of the Sonifying Hourglass concept showing speakers and an air pollution detector"
+              />
+              <figcaption>
+                The first sketch already contained the core loop: sense the air,
+                turn the hourglass, and make the data audible.
+              </figcaption>
+            </figure>
+
+            <div>
+              <h2>The interaction started on paper.</h2>
+              <div className="hourglassProse">
+                <p>
+                  Before electronics or code, the concept was deliberately
+                  simple: connect an air-pollution detector to a familiar
+                  hourglass and let sound radiate from the object as the grains
+                  fall.
+                </p>
+                <p>
+                  That sketch established the main design idea early — the data
+                  should not live on a screen. The physical object itself would
+                  become the interface.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="hourglassSection">
+          <p className="hourglassSectionLabel">03 · Prototype</p>
+          <figure className="hourglassProcessImage hourglassProcessImageWide">
+            <img
+              src={setupImage}
+              alt="First working Sonifying Hourglass setup connected to a laptop running the sound system"
+            />
+            <figcaption>
+              First working setup: the physical prototype connected to the
+              laptop while the sensing and sound pipeline was being tested.
+            </figcaption>
+          </figure>
+
           <div className="hourglassSplit">
             <div>
               <h2>A physical object became the interface.</h2>
@@ -151,7 +193,7 @@ export function SonifyingHourglassPage() {
         </section>
 
         <section className="hourglassSection">
-          <p className="hourglassSectionLabel">03 · Sound design</p>
+          <p className="hourglassSectionLabel">04 · Sound design</p>
           <h2>Four different answers to the same data.</h2>
           <p className="hourglassSectionIntro">
             Rather than assuming one sonification was correct, the study
@@ -171,7 +213,7 @@ export function SonifyingHourglassPage() {
         </section>
 
         <section className="hourglassSection">
-          <p className="hourglassSectionLabel">04 · In action</p>
+          <p className="hourglassSectionLabel">05 · In action</p>
           <h2>The interaction only makes sense when you hear it.</h2>
           <div className="hourglassVideo">
             <iframe
@@ -185,7 +227,7 @@ export function SonifyingHourglassPage() {
         </section>
 
         <section className="hourglassSection">
-          <p className="hourglassSectionLabel">05 · Evaluation</p>
+          <p className="hourglassSectionLabel">06 · Evaluation</p>
           <div className="hourglassOutcome">
             <h2>Clarity alone was not enough.</h2>
             <div className="hourglassProse">
@@ -207,7 +249,7 @@ export function SonifyingHourglassPage() {
         </section>
 
         <section className="hourglassSection hourglassLearning">
-          <p className="hourglassSectionLabel">06 · What I took from it</p>
+          <p className="hourglassSectionLabel">07 · What I took from it</p>
           <h2>A data interface can be understandable and still be unpleasant.</h2>
           <div className="hourglassProse">
             <p>

@@ -62,118 +62,69 @@
   color: var(--accent);
 }
 
-.hourglassObject {
-  position: relative;
-  min-height: 480px;
-  display: grid;
-  place-items: center;
+.hourglassHeroMedia {
+  margin: 0;
+  padding: 12px;
   border: 1px solid var(--border);
-  border-radius: 36px;
-  background:
-    radial-gradient(circle at 50% 28%, var(--highlight-bg), transparent 30%),
-    radial-gradient(circle at 50% 72%, var(--accent-bg), transparent 34%),
-    var(--bg);
-  overflow: hidden;
+  border-radius: 32px;
+  background: var(--accent-bg);
+  box-shadow: var(--shadow);
+  transform: rotate(1deg);
 }
 
-.hourglassFrame {
-  position: relative;
-  width: 170px;
-  height: 310px;
+.hourglassHeroMedia img,
+.hourglassProcessImage img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
 }
 
-.hourglassFrame::before,
-.hourglassFrame::after {
-  content: "";
-  position: absolute;
-  left: -18px;
-  right: -18px;
-  height: 14px;
-  border-radius: 999px;
-  background: var(--text-h);
+.hourglassHeroMedia img {
+  max-height: 620px;
+  border-radius: 22px;
 }
 
-.hourglassFrame::before {
-  top: 0;
-}
-
-.hourglassFrame::after {
-  bottom: 0;
-}
-
-.hourglassBulb {
-  position: absolute;
-  left: 50%;
-  width: 132px;
-  height: 132px;
-  border: 3px solid var(--text-h);
-  background: color-mix(in srgb, var(--bg) 84%, transparent);
-  transform: translateX(-50%) rotate(45deg);
-  overflow: hidden;
-}
-
-.hourglassBulbTop {
-  top: 30px;
-  border-radius: 16px 50% 16px 50%;
-}
-
-.hourglassBulbBottom {
-  bottom: 30px;
-  border-radius: 50% 16px 50% 16px;
-}
-
-.hourglassBulb span {
-  position: absolute;
-  inset: 54%;
-  background: var(--highlight);
-  box-shadow: 0 0 46px var(--highlight-bg);
-}
-
-.hourglassBulbTop span {
-  inset: 12px 12px 52px 52px;
-}
-
-.hourglassBulbBottom span {
-  inset: 52px 52px 12px 12px;
-  background: var(--accent);
-  box-shadow: 0 0 46px var(--accent-bg);
-}
-
-.hourglassNeck {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 5px;
-  height: 42px;
-  border-radius: 999px;
-  background: linear-gradient(var(--highlight), var(--accent));
-  transform: translate(-50%, -50%);
-}
-
-.hourglassSignal {
-  position: absolute;
-  right: 24px;
-  bottom: 24px;
-  display: grid;
-  gap: 2px;
-  padding: 12px 16px;
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  text-align: left;
-  backdrop-filter: blur(12px);
-}
-
-.hourglassSignal span {
+.hourglassHeroMedia figcaption,
+.hourglassProcessImage figcaption {
+  padding: 12px 8px 2px;
   color: var(--text);
-  font-family: var(--mono);
-  font-size: 0.72rem;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  text-align: left;
 }
 
-.hourglassSignal strong {
-  color: var(--text-h);
-  font-size: 0.88rem;
+.hourglassConceptGrid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(40px, 7vw, 80px);
+  align-items: center;
 }
+
+.hourglassConceptGrid h2 {
+  margin-top: 16px;
+}
+
+.hourglassProcessImage {
+  margin: 0;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 26px;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+}
+
+.hourglassProcessImage img {
+  border-radius: 18px;
+}
+
+.hourglassProcessImageWide {
+  margin: 34px 0 48px;
+}
+
+.hourglassProcessImageWide img {
+  max-height: 680px;
+}
+
 
 .hourglassMeta {
   display: grid;
@@ -390,8 +341,15 @@
     justify-content: center;
   }
 
-  .hourglassObject {
-    min-height: 400px;
+  .hourglassHeroMedia {
+    width: min(520px, 100%);
+    margin: 0 auto;
+    transform: none;
+  }
+
+  .hourglassConceptGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
   .hourglassMeta {
@@ -450,6 +408,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .hourglassHeroMedia {
+    transform: none;
+  }
+
   .hourglassActions a,
   .hourglassSources a {
     transition: none;
