@@ -1,7 +1,7 @@
 import "../../styles/sonifyingHourglassPage.css";
-import sketchImage from "../../assets/projects/sonifying-hourglass/sketch.webp";
-import setupImage from "../../assets/projects/sonifying-hourglass/setup.webp";
-import finalModelImage from "../../assets/projects/sonifying-hourglass/final.webp";
+import sketchImage from "../../assets/projects/sonifying-hourglass/sketch.jpg";
+import setupImage from "../../assets/projects/sonifying-hourglass/setup.png";
+import finalModelImage from "../../assets/projects/sonifying-hourglass/final.png";
 
 const soundModels = [
   {
@@ -102,9 +102,9 @@ export function SonifyingHourglassPage() {
           <h2>Air quality is important, but mostly invisible.</h2>
           <div className="hourglassProse">
             <p>
-              Indoor CO₂ levels can deteriorate without giving people an
-              obvious cue that something has changed. The project asked whether
-              an ordinary desk object could turn that hidden environmental data
+              Indoor CO₂ levels can deteriorate without giving people an obvious
+              cue that something has changed. The project asked whether an
+              ordinary desk object could turn that hidden environmental data
               into something perceptible through interaction and sound.
             </p>
             <p>
@@ -173,9 +173,9 @@ export function SonifyingHourglassPage() {
                 </p>
                 <p>
                   The accelerometer detected when the object was turned, while
-                  the photo-resistors tracked the beginning and end of the
-                  grain flow. Sensor data was sent to Pure Data on a laptop,
-                  where the sound was generated in real time.
+                  the photo-resistors tracked the beginning and end of the grain
+                  flow. Sensor data was sent to Pure Data on a laptop, where the
+                  sound was generated in real time.
                 </p>
               </div>
             </div>
@@ -197,8 +197,7 @@ export function SonifyingHourglassPage() {
           <h2>Four different answers to the same data.</h2>
           <p className="hourglassSectionIntro">
             Rather than assuming one sonification was correct, the study
-            compared four models built around different sound-design
-            strategies.
+            compared four models built around different sound-design strategies.
           </p>
 
           <div className="soundModelGrid">
@@ -250,7 +249,9 @@ export function SonifyingHourglassPage() {
 
         <section className="hourglassSection hourglassLearning">
           <p className="hourglassSectionLabel">07 · What I took from it</p>
-          <h2>A data interface can be understandable and still be unpleasant.</h2>
+          <h2>
+            A data interface can be understandable and still be unpleasant.
+          </h2>
           <div className="hourglassProse">
             <p>
               The study exposed a useful design tension: a sound can communicate
