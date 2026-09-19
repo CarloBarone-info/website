@@ -15,16 +15,15 @@ const contents = [
   {
     title: "Entry 1 - Animation",
     children: (
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/MGvWJ39T7gQ?si=06BZrrxZZjMuv1fi"
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerPolicy="strict-origin-when-cross-origin"
-        allowFullScreen
-      ></iframe>
+      <div className="responsiveVideo">
+        <iframe
+          src="https://www.youtube.com/embed/MGvWJ39T7gQ?si=06BZrrxZZjMuv1fi"
+          title="Indie Film Music Contest animation entry"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
+      </div>
     ),
   },
   {
@@ -35,16 +34,15 @@ const contents = [
           Film extract used with permission from Cameron Perry – A Grade
           Students.
         </h4>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/k1xd1L15KUU?si=el0vuKW_gR3nw4Tf"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        ></iframe>
+        <div className="responsiveVideo">
+          <iframe
+            src="https://www.youtube.com/embed/k1xd1L15KUU?si=el0vuKW_gR3nw4Tf"
+            title="Indie Film Music Contest live-action entry"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        </div>
       </>
     ),
   },

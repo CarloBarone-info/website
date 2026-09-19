@@ -14,7 +14,7 @@ export function ProjectList() {
         intro="A collection of professional, research, and creative work spanning digital products, interaction design, accessibility, sound, and code."
       />
 
-      <section className="projectSection">
+      <section className="projectSection projectSectionDesign">
         <div className="projectSectionHeader">
           <h2>Design &amp; Engineering</h2>
           <p>
@@ -31,7 +31,7 @@ export function ProjectList() {
         </div>
       </section>
 
-      <section className="projectSection">
+      <section className="projectSection projectSectionCreative">
         <div className="projectSectionHeader">
           <h2>Creative Practice</h2>
           <p>

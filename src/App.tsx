@@ -8,11 +8,13 @@ import { SonifyingHourglassPage } from "./pages/projects/SonifyingHourglassPage"
 import { FicSonPage } from "./pages/projects/FicSonPage";
 import { IndieFilmMusicContestPage } from "./pages/projects/IndieFilmMusicContestPage";
 import { SideNav } from "./components/SideNav";
+import { BackToTop } from "./components/BackToTop";
 
 function App() {
   return (
     <HashRouter>
       <SideNav />
+      <BackToTop />
 
       <main className="page">
         <Routes>
