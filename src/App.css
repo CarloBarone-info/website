@@ -218,6 +218,32 @@
   margin-bottom: 16px;
 }
 
+/* Contact portrait */
+.contactPortrait {
+  width: min(300px, 72vw);
+  margin: 0 auto 52px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  background: var(--accent-bg);
+  box-shadow: var(--shadow);
+}
+
+.contactPortrait img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+.contactPortrait figcaption {
+  padding: 9px 6px 0;
+  color: var(--text);
+  font-size: 0.7rem;
+  line-height: 1.35;
+  text-align: center;
+}
+
 /* Grids */
 .projectsGrid,
 .experiencesGrid,
