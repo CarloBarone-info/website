@@ -53,7 +53,7 @@ export function Card({
               target={isExternalLink ? "_blank" : undefined}
               rel={isExternalLink ? "noreferrer" : undefined}
             >
-              {title + " (external link)"}
+              {title + " (external link) →"}
             </a>
           )}
         </>
