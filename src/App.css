@@ -308,15 +308,13 @@
     opacity 220ms ease;
 }
 
-.card:hover,
-.card:focus-within {
+.card:hover {
   transform: translateY(-6px);
   border-color: var(--accent-border);
   box-shadow: var(--shadow);
 }
 
-.card:hover::before,
-.card:focus-within::before {
+.card:hover::before {
   transform: scaleX(1);
   opacity: 1;
 }
@@ -391,6 +389,12 @@
 .card a:hover {
   color: var(--accent);
   transform: translateX(3px);
+}
+
+.card a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
 .contactCard {
@@ -800,7 +804,6 @@
   }
 
   .card:hover,
-  .card:focus-within,
   .card a:hover {
     transform: none;
   }
