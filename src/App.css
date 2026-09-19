@@ -27,9 +27,6 @@
   max-width: 1500px;
   margin: 0 auto;
   text-align: center;
-  background:
-    radial-gradient(circle at 42% 34%, var(--accent-bg), transparent 36%),
-    radial-gradient(circle at 62% 58%, var(--highlight-bg), transparent 28%);
 }
 
 .hero > * {
@@ -69,7 +66,7 @@
   max-width: 1200px;
   margin: 22px auto 0;
   font-size: clamp(3rem, 7vw, 6rem);
-  line-height: 0.98;
+  line-height: 1.04;
   letter-spacing: -0.04em;
 }
 
@@ -82,7 +79,7 @@
   max-width: 720px;
   margin: 30px auto 0;
   font-size: 1.2rem;
-  line-height: 1.65;
+  line-height: 1.58;
   color: var(--text);
 }
 
@@ -158,7 +155,7 @@
 .pageHeader h1 {
   margin: 20px 0 0;
   font-size: clamp(3.5rem, 8vw, 7rem);
-  line-height: 0.92;
+  line-height: 1;
   letter-spacing: -0.055em;
 }
 
@@ -167,14 +164,25 @@
   margin: 28px auto 0;
   color: var(--text);
   font-size: clamp(1rem, 1.8vw, 1.2rem);
-  line-height: 1.65;
+  line-height: 1.58;
 }
 
 .projectSection {
-  margin-bottom: 112px;
-  padding-top: 40px;
-  border-top: 1px solid var(--border);
+  margin-bottom: 96px;
+  padding: 48px clamp(20px, 4vw, 44px);
+  border: 1px solid var(--border);
+  border-radius: 30px;
   animation: fadeUp 650ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.projectSectionDesign {
+  border-color: var(--accent-border);
+  background: linear-gradient(180deg, var(--accent-bg), transparent 180px);
+}
+
+.projectSectionCreative {
+  border-color: var(--highlight-border);
+  background: linear-gradient(180deg, var(--highlight-bg), transparent 180px);
 }
 
 .projectSection:nth-of-type(1) {
@@ -198,7 +206,7 @@
 .projectSectionHeader p {
   margin: 0;
   color: var(--text);
-  line-height: 1.65;
+  line-height: 1.58;
 }
 
 .projects h2,
@@ -444,12 +452,17 @@
   z-index: 140;
   width: min(390px, 88vw);
   height: 100dvh;
+  min-height: 100dvh;
+  max-height: 100dvh;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   overscroll-behavior: contain;
-  padding: 28px;
+  padding:
+    max(28px, env(safe-area-inset-top))
+    28px
+    max(28px, env(safe-area-inset-bottom));
   border-right: 1px solid var(--border);
   background:
     radial-gradient(circle at 10% 8%, var(--accent-bg), transparent 34%),
@@ -591,6 +604,7 @@
 }
 
 .sideNavFooter {
+  flex-shrink: 0;
   margin-top: auto;
   padding-top: 28px;
   border-top: 1px solid var(--border);
@@ -616,13 +630,13 @@
   }
 
   .projectSection {
-    margin-bottom: 80px;
+    margin-bottom: 72px;
   }
 }
 
 @media (max-width: 640px) {
   .page {
-    padding: 18px;
+    padding: 72px 18px 18px;
   }
 
   .sideNavToggle {
@@ -633,7 +647,10 @@
 
   .sideNav {
     width: min(360px, 92vw);
-    padding: 22px;
+    padding:
+      max(22px, env(safe-area-inset-top))
+      22px
+      max(22px, env(safe-area-inset-bottom));
   }
 
   .hero {

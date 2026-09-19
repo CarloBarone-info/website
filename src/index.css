@@ -68,6 +68,23 @@
   }
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  max-width: 100%;
+}
+
 #root {
   margin: 0 auto;
   text-align: center;
@@ -92,6 +109,7 @@ h2 {
 
 h1 {
   font-size: 56px;
+  line-height: 1.05;
   letter-spacing: -1.68px;
   margin: 32px 0;
   @media (max-width: 1024px) {
