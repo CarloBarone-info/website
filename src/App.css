@@ -19,10 +19,11 @@
 
 /* Hero */
 .hero {
-  min-height: 72vh;
+  min-height: calc(100svh - 48px);
+  padding: clamp(88px, 12vh, 144px) 0 clamp(104px, 14vh, 168px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   max-width: 1500px;
   margin: 0 auto;
@@ -38,15 +39,11 @@
 }
 
 .hero > :nth-child(2) {
-  animation-delay: 130ms;
+  animation-delay: 140ms;
 }
 
 .hero > :nth-child(3) {
-  animation-delay: 200ms;
-}
-
-.hero > :nth-child(4) {
-  animation-delay: 270ms;
+  animation-delay: 220ms;
 }
 
 .eyebrow {
@@ -58,13 +55,9 @@
   font-weight: 700;
 }
 
-.hero .eyebrow {
-  color: var(--accent);
-}
-
 .hero h1 {
   max-width: 1200px;
-  margin: 22px auto 0;
+  margin: 0 auto;
   font-size: clamp(3rem, 7vw, 6rem);
   line-height: 1.04;
   letter-spacing: -0.04em;
@@ -215,6 +208,32 @@
   font-size: clamp(2rem, 4vw, 3rem);
   letter-spacing: -0.035em;
   margin-bottom: 16px;
+}
+
+/* Contact portrait */
+.contactPortrait {
+  width: min(300px, 72vw);
+  margin: 0 auto 52px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  background: var(--accent-bg);
+  box-shadow: var(--shadow);
+}
+
+.contactPortrait img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+.contactPortrait figcaption {
+  padding: 9px 6px 0;
+  color: var(--text);
+  font-size: 0.7rem;
+  line-height: 1.35;
+  text-align: center;
 }
 
 /* Grids */
@@ -733,7 +752,8 @@
   }
 
   .hero {
-    min-height: 68vh;
+    min-height: auto;
+    padding: 32px 0 72px;
   }
 
   .pageHeader {
