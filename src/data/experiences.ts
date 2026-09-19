@@ -3,6 +3,7 @@ export const experiences = [
     title: "Frontend Developer & UX Designer @ Neovici AB",
     date: "2023-2026",
     isExperience: true,
+    projectPath: "/projects/neovici",
     description:
       "Contributed to the development of a web-based invoice management tool, enhancing user experience and interface design.",
     link: "https://www.neovici.se",
