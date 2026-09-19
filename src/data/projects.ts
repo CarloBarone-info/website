@@ -73,19 +73,6 @@ export const projects: Project[] = [
     link: "https://carlobarone.wixsite.com/main-page/sonifying-hourglass",
   },
   {
-    title: "Music arrangements",
-    slug: "music-portfolio",
-    date: "2023–",
-    isProject: true,
-    section: "creative-practice",
-    description:
-      "An ongoing collection of original compositions and arrangements across pop, classical, and jazz.",
-    impact:
-      "Built a growing body of composition and arrangement work exploring harmony, orchestration, and musical structure across different genres.",
-    tech: ["Music theory", "MuseScore", "Pop music", "Classical music", "Jazz"],
-    link: "https://musescore.com/user/59610958",
-  },
-  {
     title: "Indie Film Music Contest 2026",
     slug: "indie-film-music-contest",
     date: "2026",
@@ -98,6 +85,19 @@ export const projects: Project[] = [
       "Composed, produced, and submitted an original score for the 2026 competition.",
     tech: ["Composition", "Sound Design", "Film Scoring"],
     link: "https://carlobarone.wixsite.com/main-page/indie-film-music-contest-2026",
+  },
+  {
+    title: "Music arrangements",
+    slug: "music-portfolio",
+    date: "2023–",
+    isProject: true,
+    section: "creative-practice",
+    description:
+      "An ongoing collection of original compositions and arrangements across pop, classical, and jazz.",
+    impact:
+      "Built a growing body of composition and arrangement work exploring harmony, orchestration, and musical structure across different genres.",
+    tech: ["Music theory", "MuseScore", "Pop music", "Classical music", "Jazz"],
+    link: "https://musescore.com/user/59610958",
   },
 ];
 
