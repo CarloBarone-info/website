@@ -4,6 +4,37 @@
   padding: 64px 24px 120px;
 }
 
+.backToProjects {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  margin-bottom: 40px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-h);
+  background: var(--bg);
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.backToProjects:hover {
+  transform: translateX(-3px);
+  border-color: var(--accent-border);
+  background: var(--accent-bg);
+}
+
+.backToProjects:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
 .projectHeader {
   margin-bottom: 96px;
 }
@@ -415,7 +446,8 @@
   }
 
   .caseStudyActions a,
-  .caseStudySources a {
+  .caseStudySources a,
+  .backToProjects {
     transition: none;
   }
 }

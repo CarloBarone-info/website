@@ -1,3 +1,4 @@
+import { BackToProjects } from "../../components/BackToProjects";
 import { Header } from "../../components/projectPages/Header";
 import { ProjectPage } from "./ProjectPage";
 
@@ -51,6 +52,7 @@ const contents = [
 export function IndieFilmMusicContestPage() {
   return (
     <main className="projectPage">
+      <BackToProjects />
       {ProjectPage(
         <Header
           title="Indie Film Music Contest 2026"
