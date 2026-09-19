@@ -1,4 +1,5 @@
 import "../../styles/sonifyingHourglassPage.css";
+import { BackToProjects } from "../../components/BackToProjects";
 import sketchImage from "../../assets/projects/sonifying-hourglass/sketch.jpg";
 import setupImage from "../../assets/projects/sonifying-hourglass/setup.png";
 import finalModelImage from "../../assets/projects/sonifying-hourglass/final.png";
@@ -29,6 +30,7 @@ const soundModels = [
 export function SonifyingHourglassPage() {
   return (
     <article className="hourglassCaseStudy">
+      <BackToProjects />
       <header className="hourglassHero">
         <div className="hourglassHeroCopy">
           <p className="hourglassEyebrow">
