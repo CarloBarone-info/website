@@ -8,7 +8,6 @@ export function BackToTop() {
       setIsVisible(window.scrollY > 600);
     };
 
-    handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
