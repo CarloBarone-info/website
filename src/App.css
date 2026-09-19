@@ -649,6 +649,53 @@
   margin-top: 4px;
 }
 
+/* Back to top */
+.backToTop {
+  position: fixed;
+  right: 22px;
+  bottom: max(22px, env(safe-area-inset-bottom));
+  z-index: 110;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--bg) 90%, transparent);
+  color: var(--text-h);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.backToTop.isVisible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.backToTop:hover {
+  border-color: var(--accent-border);
+  background: var(--accent-bg);
+}
+
+.backToTop:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .projectsGrid,
@@ -697,6 +744,11 @@
     padding: 24px;
     border-radius: 20px;
   }
+
+  .backToTop {
+    right: 14px;
+    bottom: max(14px, env(safe-area-inset-bottom));
+  }
 }
 
 /* Accessibility */
@@ -721,7 +773,9 @@
   .sideNavClose,
   .sideNavLinks a,
   .sideNavLinks a::after,
-  .sideNavIcon {
+  .sideNavIcon,
+  .contactCardArrow,
+  .backToTop {
     transition: none !important;
   }
 
