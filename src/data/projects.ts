@@ -55,6 +55,7 @@ export const projects: Project[] = [
     slug: "sonifying-hourglass",
     date: "2021–2022",
     isProject: true,
+    isLocalProject: true,
     section: "selected-work",
     description:
       "A case study exploring how data sonification can make indoor air-pollution levels perceptible through sound and physical interaction.",
