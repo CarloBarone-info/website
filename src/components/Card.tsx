@@ -41,7 +41,9 @@ export function Card({
           {description && <p>{description}</p>}
           {impact && <p className="impact">{impact}</p>}
           <div className="techList">
-            {tech?.map((item) => <span key={item}>{item}</span>)}
+            {tech?.map((item) => (
+              <span key={item}>{item}</span>
+            ))}
           </div>
           {isLocalProject ? (
             <Link to={`/projects/${slug}`}>View project →</Link>
@@ -51,7 +53,7 @@ export function Card({
               target={isExternalLink ? "_blank" : undefined}
               rel={isExternalLink ? "noreferrer" : undefined}
             >
-              {title}
+              {title + " (external link) →"}
             </a>
           )}
         </>
