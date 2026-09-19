@@ -10,6 +10,7 @@ export function Card({
   isLocalProject = false,
   isContact,
   isExperience,
+  projectPath,
   description,
   impact,
   tech,
@@ -65,13 +66,16 @@ export function Card({
           <h4 className="date">{date}</h4>
           {description && <p>{description}</p>}
           {impact && <p className="impact">{impact}</p>}
-          <a
-            href={link}
-            target={isExternalLink ? "_blank" : undefined}
-            rel={isExternalLink ? "noreferrer" : undefined}
-          >
-            View company details →
-          </a>
+          <div className="cardLinks">
+            {projectPath && <Link to={projectPath}>View project →</Link>}
+            <a
+              href={link}
+              target={isExternalLink ? "_blank" : undefined}
+              rel={isExternalLink ? "noreferrer" : undefined}
+            >
+              View company details{projectPath ? " (external link)" : ""} →
+            </a>
+          </div>
         </>
       )}
     </article>
