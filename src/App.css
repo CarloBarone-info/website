@@ -374,6 +374,38 @@
   transform: translateX(3px);
 }
 
+.contactCard {
+  min-height: 112px;
+  justify-content: center;
+  padding-right: 70px;
+  color: var(--text-h);
+  text-decoration: none;
+}
+
+.contactCard h3 {
+  margin: 0;
+}
+
+.contactCardArrow {
+  position: absolute;
+  right: 28px;
+  top: 50%;
+  color: var(--accent);
+  font-size: 1.35rem;
+  transform: translateY(-50%);
+  transition: transform 180ms ease;
+}
+
+.contactCard:hover .contactCardArrow,
+.contactCard:focus-visible .contactCardArrow {
+  transform: translate(3px, -53%);
+}
+
+.contactCard:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
 /* Side navigation */
 .sideNavToggle {
   position: fixed;

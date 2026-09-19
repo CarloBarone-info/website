@@ -14,49 +14,50 @@ export function Card({
   impact,
   tech,
 }: CardProps) {
-  const renderCard = (
-    isProject: boolean,
-    isLocalProject: boolean,
-    isContact: boolean,
-    isExperience: boolean,
-  ) => {
-    if (isProject) {
-      return (
+  const isExternalLink = link?.startsWith("http");
+
+  if (isContact) {
+    return (
+      <a
+        className="card contactCard"
+        href={link}
+        target={isExternalLink ? "_blank" : undefined}
+        rel={isExternalLink ? "noreferrer" : undefined}
+      >
+        <h3>{title}</h3>
+        <span className="contactCardArrow" aria-hidden="true">
+          ↗
+        </span>
+      </a>
+    );
+  }
+
+  return (
+    <article className="card">
+      {isProject && (
         <>
           <h3>{title}</h3>
           <h4 className="date">{date}</h4>
           {description && <p>{description}</p>}
           {impact && <p className="impact">{impact}</p>}
           <div className="techList">
-            {tech && tech.map((item) => <span key={item}>{item}</span>)}
+            {tech?.map((item) => <span key={item}>{item}</span>)}
           </div>
           {isLocalProject ? (
             <Link to={`/projects/${slug}`}>View project →</Link>
           ) : (
             <a
               href={link}
-              target={link && link.startsWith("http") ? "_blank" : undefined}
-              rel={link && link.startsWith("http") ? "noreferrer" : undefined}
+              target={isExternalLink ? "_blank" : undefined}
+              rel={isExternalLink ? "noreferrer" : undefined}
             >
               {title}
             </a>
           )}
         </>
-      );
-    } else if (isContact) {
-      return (
-        <h3>
-          <a
-            href={link}
-            target={link && link.startsWith("http") ? "_blank" : undefined}
-            rel={link && link.startsWith("http") ? "noreferrer" : undefined}
-          >
-            {title}
-          </a>
-        </h3>
-      );
-    } else if (isExperience) {
-      return (
+      )}
+
+      {isExperience && (
         <>
           <h3>{title}</h3>
           <h4 className="date">{date}</h4>
@@ -64,23 +65,12 @@ export function Card({
           {impact && <p className="impact">{impact}</p>}
           <a
             href={link}
-            target={link && link.startsWith("http") ? "_blank" : undefined}
-            rel={link && link.startsWith("http") ? "noreferrer" : undefined}
+            target={isExternalLink ? "_blank" : undefined}
+            rel={isExternalLink ? "noreferrer" : undefined}
           >
-            {"View company details →"}
+            View company details →
           </a>
         </>
-      );
-    }
-  };
-
-  return (
-    <article className="card">
-      {renderCard(
-        isProject || false,
-        isLocalProject,
-        isContact || false,
-        isExperience || false,
       )}
     </article>
   );
