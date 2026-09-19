@@ -23,7 +23,7 @@
   padding: clamp(88px, 12vh, 144px) 0 clamp(104px, 14vh, 168px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   max-width: 1500px;
   margin: 0 auto;
@@ -39,15 +39,11 @@
 }
 
 .hero > :nth-child(2) {
-  animation-delay: 130ms;
+  animation-delay: 140ms;
 }
 
 .hero > :nth-child(3) {
-  animation-delay: 200ms;
-}
-
-.hero > :nth-child(4) {
-  animation-delay: 270ms;
+  animation-delay: 220ms;
 }
 
 .eyebrow {
@@ -59,13 +55,9 @@
   font-weight: 700;
 }
 
-.hero .eyebrow {
-  color: var(--accent);
-}
-
 .hero h1 {
   max-width: 1200px;
-  margin: 22px auto 0;
+  margin: 0 auto;
   font-size: clamp(3rem, 7vw, 6rem);
   line-height: 1.04;
   letter-spacing: -0.04em;

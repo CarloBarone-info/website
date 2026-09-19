@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 export function Hero() {
   return (
     <section className="hero">
-      <p className="eyebrow">Design · Engineering · Product</p>
-
       <h1>
         Hi, I’m Carlo.
         <span className="heroHeadline">
