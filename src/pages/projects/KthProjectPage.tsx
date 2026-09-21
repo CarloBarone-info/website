@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export function KthProjectPage() {
   return (
-    <article className="projectPage">
+    <article className="projectPage kthPage">
       <Link className="backToProjects" to="/resume">
         <span aria-hidden="true">←</span>
         Back to résumé
