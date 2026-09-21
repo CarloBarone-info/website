@@ -83,7 +83,7 @@ export function Card({
               target={isExternalLink ? "_blank" : undefined}
               rel={isExternalLink ? "noreferrer" : undefined}
             >
-              Organisation website ↗
+              {projectPath ? "Company details (external) ↗" : "Organisation website ↗"}
             </a>
           </div>
         </>
