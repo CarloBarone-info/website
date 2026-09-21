@@ -1,6 +1,21 @@
 import { Link } from "react-router-dom";
 import type { CardProps } from "../types/props";
 
+function ExternalLinkIcon() {
+  return (
+    <svg
+      className="cardCtaIcon"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path d="M14 5h5v5" />
+      <path d="M19 5 11 13" />
+      <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" />
+    </svg>
+  );
+}
+
 export function Card({
   title,
   slug,
@@ -51,7 +66,7 @@ export function Card({
           <div className="cardActions">
             {isLocalProject ? (
               <Link className="cardCta cardCtaPrimary" to={`/projects/${slug}`}>
-                View case study →
+                View case study
               </Link>
             ) : (
               <a
@@ -60,7 +75,8 @@ export function Card({
                 target={isExternalLink ? "_blank" : undefined}
                 rel={isExternalLink ? "noreferrer" : undefined}
               >
-                View project ↗
+                View project
+                <ExternalLinkIcon />
               </a>
             )}
           </div>
@@ -76,7 +92,7 @@ export function Card({
           <div className="cardActions">
             {projectPath && (
               <Link className="cardCta cardCtaPrimary" to={projectPath}>
-                {projectLabel ?? "Role & contributions →"}
+                {projectLabel ?? "Role & contributions"}
               </Link>
             )}
             <a
@@ -85,7 +101,8 @@ export function Card({
               target={isExternalLink ? "_blank" : undefined}
               rel={isExternalLink ? "noreferrer" : undefined}
             >
-              {externalLabel ?? "Organisation website ↗"}
+              {externalLabel ?? "Organisation website"}
+              <ExternalLinkIcon />
             </a>
           </div>
         </>

@@ -4,8 +4,8 @@ export const experiences = [
     date: "2023-2026",
     isExperience: true,
     projectPath: "/projects/neovici",
-    projectLabel: "Role & contributions →",
-    externalLabel: "Company details (external) ↗",
+    projectLabel: "Role & contributions",
+    externalLabel: "Company details",
     description:
       "Contributed to the development of a web-based invoice management tool, enhancing user experience and interface design.",
     link: "https://www.neovici.se",
@@ -16,8 +16,8 @@ export const experiences = [
     date: "2020-2022",
     isExperience: true,
     projectPath: "/projects/kth",
-    projectLabel: "Research & teaching →",
-    externalLabel: "KTH website ↗",
+    projectLabel: "Research & teaching",
+    externalLabel: "KTH website",
     description:
       "Published research on sound design for accessibility and data sonification, and assisted in teaching courses on sound design and interactive media.",
     link: "https://www.kth.se",
