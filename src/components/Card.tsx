@@ -46,17 +46,22 @@ export function Card({
               <span key={item}>{item}</span>
             ))}
           </div>
-          {isLocalProject ? (
-            <Link to={`/projects/${slug}`}>View project →</Link>
-          ) : (
-            <a
-              href={link}
-              target={isExternalLink ? "_blank" : undefined}
-              rel={isExternalLink ? "noreferrer" : undefined}
-            >
-              {title + " (external link) →"}
-            </a>
-          )}
+          <div className="cardActions">
+            {isLocalProject ? (
+              <Link className="cardCta cardCtaPrimary" to={`/projects/${slug}`}>
+                View case study →
+              </Link>
+            ) : (
+              <a
+                className="cardCta cardCtaPrimary"
+                href={link}
+                target={isExternalLink ? "_blank" : undefined}
+                rel={isExternalLink ? "noreferrer" : undefined}
+              >
+                View project ↗
+              </a>
+            )}
+          </div>
         </>
       )}
 
@@ -66,14 +71,19 @@ export function Card({
           <h4 className="date">{date}</h4>
           {description && <p>{description}</p>}
           {impact && <p className="impact">{impact}</p>}
-          <div className="cardLinks">
-            {projectPath && <Link to={projectPath}>View project →</Link>}
+          <div className="cardActions">
+            {projectPath && (
+              <Link className="cardCta cardCtaPrimary" to={projectPath}>
+                Role & contributions →
+              </Link>
+            )}
             <a
+              className={`cardCta ${projectPath ? "cardCtaSecondary" : "cardCtaPrimary"}`}
               href={link}
               target={isExternalLink ? "_blank" : undefined}
               rel={isExternalLink ? "noreferrer" : undefined}
             >
-              View company details{projectPath ? " (external link)" : ""} →
+              Organisation website ↗
             </a>
           </div>
         </>

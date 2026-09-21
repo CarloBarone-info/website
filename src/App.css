@@ -373,38 +373,64 @@
   border-color: var(--accent-border);
 }
 
-.card a {
-  display: inline-flex;
-  width: fit-content;
-  color: var(--text-h);
-  font-weight: 700;
-  margin-top: auto;
-  text-underline-offset: 4px;
-  text-decoration-thickness: 1px;
-  transition:
-    color 180ms ease,
-    transform 180ms ease;
-}
-
-.card a:hover {
-  color: var(--accent);
-  transform: translateX(3px);
-}
-
-.cardLinks {
-  display: grid;
+.cardActions {
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin-top: auto;
+  padding-top: 22px;
 }
 
-.cardLinks a {
-  margin-top: 0;
+.cardCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 42px;
+  padding: 9px 14px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    box-shadow 180ms ease;
 }
 
-.card a:focus-visible {
+.cardCtaPrimary {
+  border-color: var(--accent-strong);
+  background: var(--accent-strong);
+  color: var(--accent-contrast);
+}
+
+.cardCtaPrimary:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--accent-contrast);
+  box-shadow: var(--shadow);
+}
+
+.cardCtaSecondary {
+  border-color: var(--border);
+  background: transparent;
+  color: var(--text-h);
+}
+
+.cardCtaSecondary:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-border);
+  background: var(--accent-bg);
+  color: var(--accent);
+}
+
+.cardCta:focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 4px;
-  border-radius: 4px;
 }
 
 .contactCard {
@@ -799,7 +825,7 @@
   .button,
   .card,
   .card::before,
-  .card a,
+  .cardCta,
   .techList span,
   .sideNav,
   .sideNavBackdrop,
@@ -814,7 +840,7 @@
   }
 
   .card:hover,
-  .card a:hover {
+  .cardCta:hover {
     transform: none;
   }
 }
