@@ -13,10 +13,28 @@
   letter-spacing: -0.055em;
 }
 
+.neoviciConfidentialityIntro {
+  max-width: 650px;
+  margin: 22px 0 0;
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
 .neoviciDisclosure {
-  margin-top: 28px;
+  margin-top: 32px;
   padding: 22px 24px;
   border: 1px solid var(--accent-border);
   border-radius: 20px;
   background: var(--accent-bg);
+}
+
+.neoviciDisclosure strong {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--text-h);
+}
+
+.neoviciDisclosure p {
+  margin: 0;
 }

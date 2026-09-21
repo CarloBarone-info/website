@@ -16,6 +16,12 @@ export function NeoviciProjectPage() {
           Frontend development and UX work on a web-based invoice management
           product.
         </p>
+
+        <p className="neoviciConfidentialityIntro">
+          This case study focuses on the parts of my work that I can discuss
+          publicly; some product and customer details are omitted due to
+          confidentiality and NDA obligations.
+        </p>
       </header>
 
       <section className="projectParagraph">
@@ -52,11 +58,15 @@ export function NeoviciProjectPage() {
             frontend environment.
           </p>
 
-          <p className="neoviciDisclosure">
-            This case study is intentionally kept high level. Internal product
-            details, customer-specific implementation details, proprietary
-            screenshots, metrics, and other non-public material are not included.
-          </p>
+          <aside className="neoviciDisclosure" aria-label="Confidentiality note">
+            <strong>Confidentiality note</strong>
+            <p>
+              Some aspects of this work are covered by confidentiality and NDA
+              obligations. Customer-specific workflows, proprietary screenshots,
+              internal metrics, implementation details, roadmap information, and
+              other non-public material are intentionally omitted.
+            </p>
+          </aside>
         </div>
       </section>
     </article>
