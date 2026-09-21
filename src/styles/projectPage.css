@@ -83,6 +83,32 @@
   border: 0;
 }
 
+
+/* KTH overview */
+.kthPage .projectHeader {
+  max-width: 720px;
+  margin: 0 auto 96px;
+  text-align: center;
+}
+
+.kthPage .projectSubtitle {
+  margin-inline: auto;
+}
+
+.kthPage .projectParagraph {
+  max-width: 720px;
+  margin: 0 auto 72px;
+}
+
+.kthPage .projectText {
+  max-width: 680px;
+  margin-inline: auto;
+}
+
+.kthPage .caseStudyActions {
+  justify-content: center;
+}
+
 /* FicSon case study */
 .ficsonPage {
   max-width: 1180px;
