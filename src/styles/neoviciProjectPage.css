@@ -1,40 +1,404 @@
-.neoviciPage {
-  max-width: 900px;
+.neoviciCaseStudy {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 48px 24px 120px;
 }
 
-.neoviciPage .projectHeader {
-  margin-top: 24px;
+.neoviciHero {
+  min-height: 70vh;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  align-items: center;
+  gap: clamp(48px, 8vw, 108px);
 }
 
-.neoviciPage .projectHeader h1 {
-  margin-top: 18px;
-  font-size: clamp(4rem, 10vw, 7.5rem);
-  line-height: 0.96;
-  letter-spacing: -0.055em;
+.neoviciHeroCopy {
+  text-align: left;
 }
 
-.neoviciConfidentialityIntro {
-  max-width: 650px;
-  margin: 22px 0 0;
+.neoviciEyebrow,
+.neoviciSectionLabel {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.neoviciHero h1 {
+  max-width: 820px;
+  margin: 18px 0 28px;
+  font-size: clamp(4.5rem, 10vw, 8rem);
+  line-height: 0.9;
+  letter-spacing: -0.065em;
+}
+
+.neoviciLead {
+  max-width: 700px;
+  margin: 0;
   color: var(--text);
-  font-size: 0.9rem;
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
   line-height: 1.6;
 }
 
-.neoviciDisclosure {
-  margin-top: 32px;
-  padding: 22px 24px;
-  border: 1px solid var(--accent-border);
-  border-radius: 20px;
-  background: var(--accent-bg);
+.neoviciActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 24px;
+  margin-top: 34px;
 }
 
+.neoviciActions a,
+.neoviciCustomerCard a,
+.neoviciStackCard a,
+.neoviciSources a {
+  color: var(--text-h);
+  font-weight: 700;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 1px;
+  transition: color 180ms ease;
+}
+
+.neoviciActions a:hover,
+.neoviciCustomerCard a:hover,
+.neoviciStackCard a:hover,
+.neoviciSources a:hover {
+  color: var(--accent);
+}
+
+.neoviciHeroMedia,
+.neoviciProcessImage {
+  margin: 0;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  background: var(--accent-bg);
+  box-shadow: var(--shadow);
+}
+
+.neoviciHeroMedia {
+  transform: rotate(1deg);
+}
+
+.neoviciHeroMedia img,
+.neoviciProcessImage img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: contain;
+}
+
+.neoviciHeroMedia figcaption,
+.neoviciProcessImage figcaption {
+  padding: 12px 8px 2px;
+  color: var(--text);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.neoviciMeta {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 24px 0 96px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.neoviciMeta div {
+  padding: 24px;
+  text-align: left;
+}
+
+.neoviciMeta div + div {
+  border-left: 1px solid var(--border);
+}
+
+.neoviciMeta dt {
+  margin-bottom: 8px;
+  color: var(--text);
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.neoviciMeta dd {
+  margin: 0;
+  color: var(--text-h);
+  font-size: 0.95rem;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.neoviciBody {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.neoviciConfidentialityIntro {
+  margin: 0 0 28px;
+  padding: 22px 24px;
+  border: 1px solid var(--accent-border);
+  border-radius: 22px;
+  background: var(--accent-bg);
+  color: var(--text);
+  line-height: 1.6;
+  text-align: left;
+}
+
+.neoviciConfidentialityIntro strong,
 .neoviciDisclosure strong {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: var(--text-h);
 }
 
+.neoviciConfidentialityIntro p,
 .neoviciDisclosure p {
   margin: 0;
+}
+
+.neoviciSection {
+  padding: 72px 0;
+  border-top: 1px solid var(--border);
+  text-align: left;
+}
+
+.neoviciSection h2 {
+  max-width: 840px;
+  margin: 16px 0 30px;
+  font-size: clamp(2rem, 5vw, 4.1rem);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+.neoviciProse {
+  max-width: 720px;
+}
+
+.neoviciProse p {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.neoviciProse p + p {
+  margin-top: 22px;
+}
+
+.neoviciSplit,
+.neoviciFeatureGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.82fr);
+  gap: clamp(42px, 7vw, 86px);
+  align-items: start;
+}
+
+.neoviciFeatureGrid {
+  grid-template-columns: minmax(300px, 0.85fr) minmax(0, 1.15fr);
+  align-items: center;
+}
+
+.neoviciFeatureGridReverse {
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+}
+
+.neoviciFeatureGrid h2,
+.neoviciSplit h2 {
+  margin-top: 16px;
+}
+
+.neoviciCustomerCard,
+.neoviciStackCard {
+  margin-top: 16px;
+  padding: 28px;
+  border: 1px solid var(--accent-border);
+  border-radius: 24px;
+  background: var(--accent-bg);
+}
+
+.neoviciCustomerCard > span,
+.neoviciStackCard > span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.neoviciCustomerCard strong {
+  display: block;
+  color: var(--text-h);
+  font-size: 1.6rem;
+}
+
+.neoviciCustomerCard p,
+.neoviciStackCard p {
+  margin: 14px 0 0;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.neoviciCustomerCard a,
+.neoviciStackCard a {
+  display: inline-flex;
+  margin-top: 20px;
+}
+
+.neoviciTechList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 34px 0 42px;
+}
+
+.neoviciTechList span {
+  padding: 8px 12px;
+  border: 1px solid var(--accent-border);
+  border-radius: 999px;
+  background: var(--accent-bg);
+  color: var(--text-h);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.neoviciStackSplit {
+  align-items: start;
+}
+
+.neoviciLearning {
+  margin-inline: -32px;
+  padding-inline: 32px;
+  border-radius: 30px;
+  background:
+    linear-gradient(135deg, var(--accent-bg), transparent 48%),
+    linear-gradient(315deg, var(--highlight-bg), transparent 44%);
+}
+
+.neoviciSources {
+  margin-top: 24px;
+  padding: 56px 0 8px;
+  border-top: 1px solid var(--border);
+  text-align: left;
+}
+
+.neoviciSources > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 28px;
+  margin-top: 18px;
+}
+
+.neoviciDisclosure {
+  margin-top: 36px;
+  padding: 22px 24px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+@media (max-width: 820px) {
+  .neoviciCaseStudy {
+    padding-top: 72px;
+  }
+
+  .neoviciHero {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .neoviciHeroCopy {
+    text-align: center;
+  }
+
+  .neoviciLead {
+    margin-inline: auto;
+  }
+
+  .neoviciActions {
+    justify-content: center;
+  }
+
+  .neoviciHeroMedia {
+    width: min(520px, 100%);
+    margin: 0 auto;
+    transform: none;
+  }
+
+  .neoviciMeta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-bottom: 72px;
+  }
+
+  .neoviciMeta div:nth-child(3) {
+    border-left: 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .neoviciMeta div:nth-child(4) {
+    border-top: 1px solid var(--border);
+  }
+
+  .neoviciSplit,
+  .neoviciFeatureGrid,
+  .neoviciFeatureGridReverse {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .neoviciFeatureGridReverse .neoviciProcessImage {
+    order: -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .neoviciCaseStudy {
+    padding-inline: 0;
+  }
+
+  .neoviciHero h1 {
+    font-size: clamp(4rem, 21vw, 6rem);
+  }
+
+  .neoviciMeta {
+    grid-template-columns: 1fr;
+  }
+
+  .neoviciMeta div + div,
+  .neoviciMeta div:nth-child(3),
+  .neoviciMeta div:nth-child(4) {
+    border-left: 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .neoviciSection {
+    padding: 56px 0;
+  }
+
+  .neoviciLearning {
+    margin-inline: -12px;
+    padding-inline: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .neoviciHeroMedia {
+    transform: none;
+  }
+
+  .neoviciActions a,
+  .neoviciCustomerCard a,
+  .neoviciStackCard a,
+  .neoviciSources a {
+    transition: none;
+  }
 }
