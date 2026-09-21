@@ -8,6 +8,8 @@ export type CardProps = {
   isContact?: boolean;
   isExperience?: boolean;
   projectPath?: string;
+  projectLabel?: string;
+  externalLabel?: string;
   description?: string;
   impact?: string;
   tech?: string[];

@@ -11,6 +11,8 @@ export function Card({
   isContact,
   isExperience,
   projectPath,
+  projectLabel,
+  externalLabel,
   description,
   impact,
   tech,
@@ -74,7 +76,7 @@ export function Card({
           <div className="cardActions">
             {projectPath && (
               <Link className="cardCta cardCtaPrimary" to={projectPath}>
-                Role & contributions →
+                {projectLabel ?? "Role & contributions →"}
               </Link>
             )}
             <a
@@ -83,7 +85,7 @@ export function Card({
               target={isExternalLink ? "_blank" : undefined}
               rel={isExternalLink ? "noreferrer" : undefined}
             >
-              {projectPath ? "Company details (external) ↗" : "Organisation website ↗"}
+              {externalLabel ?? "Organisation website ↗"}
             </a>
           </div>
         </>

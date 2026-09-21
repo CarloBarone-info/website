@@ -8,6 +8,7 @@ import { SonifyingHourglassPage } from "./pages/projects/SonifyingHourglassPage"
 import { FicSonPage } from "./pages/projects/FicSonPage";
 import { IndieFilmMusicContestPage } from "./pages/projects/IndieFilmMusicContestPage";
 import { NeoviciProjectPage } from "./pages/projects/NeoviciProjectPage";
+import { KthProjectPage } from "./pages/projects/KthProjectPage";
 import { SideNav } from "./components/SideNav";
 import { BackToTop } from "./components/BackToTop";
 
@@ -36,6 +37,7 @@ function App() {
             element={<IndieFilmMusicContestPage />}
           />
           <Route path="/projects/neovici" element={<NeoviciProjectPage />} />
+          <Route path="/projects/kth" element={<KthProjectPage />} />
         </Routes>
       </main>
     </HashRouter>
