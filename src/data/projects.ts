@@ -36,7 +36,7 @@ export const projects: Project[] = [
     link: "https://github.com/CarloBarone-info",
   },
   {
-    title: "FicSon",
+    title: "Fictitious Soundscapes",
     slug: "fictitious-soundscapes",
     date: "2020–2022",
     isProject: true,
@@ -49,7 +49,7 @@ export const projects: Project[] = [
     link: "https://carlobarone.wixsite.com/main-page/fictitious-soundscapes",
   },
   {
-    title: "The Sonifying Hourglass",
+    title: "Sonifying Hourglass",
     slug: "sonifying-hourglass",
     date: "2021–2022",
     isProject: true,

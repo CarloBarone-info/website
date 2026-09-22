@@ -36,7 +36,7 @@ export function SonifyingHourglassPage() {
           <p className="hourglassEyebrow">
             Research prototype · KTH · SMC 2022
           </p>
-          <h1>The Sonifying Hourglass</h1>
+          <h1>Sonifying Hourglass</h1>
           <p className="hourglassLead">
             A tangible interaction experiment exploring whether sound can make
             invisible indoor air-quality data easier to notice and understand.
