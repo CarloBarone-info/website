@@ -1,6 +1,53 @@
 import { Link } from "react-router-dom";
 import type { CardProps } from "../types/props";
 
+function ContactIcon({ title }: { title: string }) {
+  if (title === "GitHub") {
+    return (
+      <svg
+        className="contactCardIcon"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <path d="m8 9-4 3 4 3" />
+        <path d="m16 9 4 3-4 3" />
+        <path d="m14 5-4 14" />
+      </svg>
+    );
+  }
+
+  if (title === "LinkedIn") {
+    return (
+      <svg
+        className="contactCardIcon"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <circle cx="7" cy="8" r="2.5" />
+        <circle cx="17" cy="7" r="2.5" />
+        <circle cx="17" cy="17" r="2.5" />
+        <path d="M9.3 9.2 14.5 7.8" />
+        <path d="M9 9.7 15.2 15.5" />
+        <path d="M17 9.5v5" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg
+      className="contactCardIcon"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <rect x="3.5" y="5.5" width="17" height="13" rx="2" />
+      <path d="m5 7 7 5 7-5" />
+    </svg>
+  );
+}
+
 function ExternalLinkIcon() {
   return (
     <svg
@@ -44,9 +91,7 @@ export function Card({
         rel={isExternalLink ? "noreferrer" : undefined}
       >
         <h3>{title}</h3>
-        <span className="contactCardArrow" aria-hidden="true">
-          ↗
-        </span>
+        <ContactIcon title={title} />
       </a>
     );
   }

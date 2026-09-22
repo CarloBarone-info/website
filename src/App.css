@@ -464,19 +464,28 @@
   margin: 0;
 }
 
-.contactCardArrow {
+.contactCardIcon {
   position: absolute;
   right: 28px;
   top: 50%;
+  width: 24px;
+  height: 24px;
   color: var(--accent);
-  font-size: 1.35rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
   transform: translateY(-50%);
-  transition: transform 180ms ease;
+  transition:
+    transform 180ms ease,
+    color 180ms ease;
 }
 
-.contactCard:hover .contactCardArrow,
-.contactCard:focus-visible .contactCardArrow {
-  transform: translate(3px, -53%);
+.contactCard:hover .contactCardIcon,
+.contactCard:focus-visible .contactCardIcon {
+  color: var(--accent-strong);
+  transform: translateY(-50%) scale(1.08);
 }
 
 .contactCard:focus-visible {
@@ -859,7 +868,7 @@
   .sideNavLinks a,
   .sideNavLinks a::after,
   .sideNavIcon,
-  .contactCardArrow,
+  .contactCardIcon,
   .backToTop {
     transition: none !important;
   }
