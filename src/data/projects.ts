@@ -1,13 +1,11 @@
-import profilePortrait from "../assets/profile-portrait.jpg";
+import gitHubLogo from "../assets/projects/github-portfolio/github-logo.png";
 import hourglassFinalImage from "../assets/projects/sonifying-hourglass/final.png";
+import museScoreImage from "../assets/projects/musescore/musescore-image.png";
 
 const ficsonImage =
   "https://static.wixstatic.com/media/4ad051_b8d06067c0b44ed0901e5c71332e7f1a~mv2.jpg/v1/crop/x_0%2Cy_38%2Cw_960%2Ch_1204/fill/w_369%2Ch_463%2Cal_c%2Cq_80%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/TekniskaFicSon.jpg";
 
 const indieFilmImage = "https://img.youtube.com/vi/MGvWJ39T7gQ/hqdefault.jpg";
-
-const museScoreImage =
-  "https://musescore.com/static/public/img/musescore/footer_cards_ver1786377230.png";
 
 export type ProjectSection = "selected-work" | "creative-practice";
 
@@ -27,14 +25,14 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "GitHub & portfolio",
-    slug: "personal-portfolio",
+    title: "GitHub",
+    slug: "github-projects",
     date: "2026–",
     isProject: true,
     section: "selected-work",
     description: "The GitHub work behind this portfolio and my other projects.",
-    image: profilePortrait,
-    imageAlt: "Portrait of Carlo Barone",
+    image: gitHubLogo,
+    imageAlt: "GitHub logo",
     link: "https://github.com/CarloBarone-info",
   },
   {
@@ -83,7 +81,7 @@ export const projects: Project[] = [
     isProject: true,
     section: "creative-practice",
     description:
-      "Original compositions and arrangements across several genres.",
+      "MuseScore portfolio of original compositions and arrangements across several genres.",
     image: museScoreImage,
     imageAlt: "MuseScore sheet-music preview artwork",
     link: "https://musescore.com/user/59610958",
