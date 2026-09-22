@@ -1,3 +1,5 @@
+import type { CardProps } from "../types/props";
+
 const neoviciImage =
   "https://cdn.prod.website-files.com/612c779ad9c35386e150549b/6193adb686c1e914d27da4d0_reposition.png";
 
@@ -31,4 +33,4 @@ export const experiences = [
     imageAlt: "FicSon installation developed during KTH work at Tekniska Museet",
     link: "https://www.kth.se",
   },
-];
+] satisfies CardProps[];
