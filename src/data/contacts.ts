@@ -1,3 +1,5 @@
+import type { CardProps } from "../types/props";
+
 export const contacts = [
   {
     title: "LinkedIn",
@@ -17,4 +19,4 @@ export const contacts = [
     isContact: true,
     link: "mailto:carlo.barone.info@gmail.com",
   },
-];
+] satisfies CardProps[];
