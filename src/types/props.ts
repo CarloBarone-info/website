@@ -11,8 +11,9 @@ export type CardProps = {
   projectLabel?: string;
   externalLabel?: string;
   description?: string;
-  impact?: string;
-  tech?: string[];
+  image?: string;
+  imageAlt?: string;
+  imageFit?: "cover" | "contain";
 };
 
 export type ProjectCardProps = {

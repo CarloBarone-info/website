@@ -1,3 +1,12 @@
+import gitHubLogo from "../assets/projects/github-portfolio/github-logo.png";
+import hourglassFinalImage from "../assets/projects/sonifying-hourglass/final.png";
+import museScoreImage from "../assets/projects/musescore/musescore-image.png";
+
+const ficsonImage =
+  "https://static.wixstatic.com/media/4ad051_b8d06067c0b44ed0901e5c71332e7f1a~mv2.jpg/v1/crop/x_0%2Cy_38%2Cw_960%2Ch_1204/fill/w_369%2Ch_463%2Cal_c%2Cq_80%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/TekniskaFicSon.jpg";
+
+const indieFilmImage = "https://img.youtube.com/vi/MGvWJ39T7gQ/hqdefault.jpg";
+
 export type ProjectSection = "selected-work" | "creative-practice";
 
 export type Project = {
@@ -8,68 +17,48 @@ export type Project = {
   isLocalProject?: boolean;
   section: ProjectSection;
   description: string;
-  impact: string;
-  tech: string[];
   link: string;
+  image?: string;
+  imageAlt?: string;
+  imageFit?: "cover" | "contain";
 };
 
 export const projects: Project[] = [
   {
-    title: "GitHub & portfolio",
-    slug: "personal-portfolio",
+    title: "GitHub",
+    slug: "github-projects",
     date: "2026–",
     isProject: true,
     section: "selected-work",
-    description:
-      "A growing collection of frontend, design-engineering, and product work, including this React and TypeScript portfolio and other experiments and repositories.",
-    impact:
-      "Built this portfolio as a product in its own right, with responsive UI, testing, CI, and automated deployment, while using GitHub as the broader record of my technical work.",
-    tech: ["React", "TypeScript", "Vite", "Testing", "GitHub Actions"],
+    description: "The GitHub work behind this portfolio and my other projects.",
+    image: gitHubLogo,
+    imageAlt: "GitHub logo",
     link: "https://github.com/CarloBarone-info",
   },
   {
-    title: "FicSon",
+    title: "Fictitious Soundscapes",
     slug: "fictitious-soundscapes",
     date: "2020–2022",
     isProject: true,
     isLocalProject: true,
     section: "selected-work",
     description:
-      "A master's thesis project using designed soundscapes to investigate how sound-design techniques are experienced by hearing-impaired users.",
-    impact:
-      "The project was exhibited at Tekniska Museet in Stockholm and explored sound design through an accessibility-focused research process.",
-    tech: [
-      "Electronics",
-      "Pure Data",
-      "JavaScript",
-      "DIY fabrication",
-      "User-centered design",
-      "Sound design",
-      "Data sonification",
-      "Accessibility",
-    ],
+      "Accessible interaction design for speculative urban soundscapes.",
+    image: ficsonImage,
+    imageAlt: "FicSon installation at Tekniska Museet in Stockholm",
     link: "https://carlobarone.wixsite.com/main-page/fictitious-soundscapes",
   },
   {
-    title: "The Sonifying Hourglass",
+    title: "Sonifying Hourglass",
     slug: "sonifying-hourglass",
     date: "2021–2022",
     isProject: true,
     isLocalProject: true,
     section: "selected-work",
     description:
-      "A case study exploring how data sonification can make indoor air-pollution levels perceptible through sound and physical interaction.",
-    impact:
-      "Designed and built an interactive sonification prototype that was presented at the Sound and Music Computing Conference in 2022.",
-    tech: [
-      "Electronics",
-      "Pure Data",
-      "Arduino",
-      "DIY fabrication",
-      "User-centered design",
-      "Sound design",
-      "Data sonification",
-    ],
+      "A tangible sonification prototype for indoor air-quality data.",
+    image: hourglassFinalImage,
+    imageAlt: "Finished Sonifying Hourglass prototype",
     link: "https://carlobarone.wixsite.com/main-page/sonifying-hourglass",
   },
   {
@@ -80,10 +69,9 @@ export const projects: Project[] = [
     isLocalProject: true,
     section: "creative-practice",
     description:
-      "An original film-scoring submission created for the Indie Film Music Contest 2026.",
-    impact:
-      "Composed, produced, and submitted an original score for the 2026 competition.",
-    tech: ["Composition", "Sound Design", "Film Scoring"],
+      "Two original film-scoring entries for animation and live action.",
+    image: indieFilmImage,
+    imageAlt: "Frame from the Indie Film Music Contest animation entry",
     link: "https://carlobarone.wixsite.com/main-page/indie-film-music-contest-2026",
   },
   {
@@ -93,10 +81,9 @@ export const projects: Project[] = [
     isProject: true,
     section: "creative-practice",
     description:
-      "An ongoing collection of original compositions and arrangements across pop, classical, and jazz.",
-    impact:
-      "Built a growing body of composition and arrangement work exploring harmony, orchestration, and musical structure across different genres.",
-    tech: ["Music theory", "MuseScore", "Pop music", "Classical music", "Jazz"],
+      "MuseScore portfolio of original compositions and arrangements across several genres.",
+    image: museScoreImage,
+    imageAlt: "MuseScore sheet-music preview artwork",
     link: "https://musescore.com/user/59610958",
   },
 ];

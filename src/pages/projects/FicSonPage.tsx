@@ -10,7 +10,7 @@ export function FicSonPage() {
       <header className="caseStudyHero">
         <div className="caseStudyHeroCopy">
           <p className="caseStudyEyebrow">Master thesis · KTH · 2022</p>
-          <h1>FicSon</h1>
+          <h1 style={{ fontSize: "7.5rem" }}>Fictitious Soundscapes</h1>
           <p className="caseStudyLead">
             Designing an accessible interface for shaping fictitious futuristic
             urban soundscapes in a museum setting.
@@ -68,9 +68,10 @@ export function FicSonPage() {
           <h2>Who gets to shape the sound of a future city?</h2>
           <div className="caseStudyProse">
             <p>
-              FicSon investigated how people with hearing impairments might
-              participate in designing future urban soundscapes rather than only
-              receiving sound-design decisions made for them.
+              Fictitious Soundscapes (or <i>FicSon</i>) investigated how people
+              with hearing impairments might participate in designing future
+              urban soundscapes rather than only receiving sound-design
+              decisions made for them.
             </p>
             <p>
               The project connected that broader research question with a very
@@ -84,7 +85,9 @@ export function FicSonPage() {
         <section className="caseStudySection">
           <p className="caseStudySectionLabel">02 · My contribution</p>
           <div className="caseStudySplit">
-            <h2>Turning sound research into an interaction people could use.</h2>
+            <h2>
+              Turning sound research into an interaction people could use.
+            </h2>
             <div className="caseStudyProse">
               <p>
                 My work focused on the interface design, programming, and
@@ -103,7 +106,9 @@ export function FicSonPage() {
 
         <section className="caseStudySection">
           <p className="caseStudySectionLabel">03 · Interaction model</p>
-          <h2>Three vehicles. Three circles. As little explanation as possible.</h2>
+          <h2>
+            Three vehicles. Three circles. As little explanation as possible.
+          </h2>
 
           <div className="ficsonInteraction">
             <div className="ficsonCircle" aria-hidden="true">
@@ -138,7 +143,9 @@ export function FicSonPage() {
           <p className="caseStudySectionLabel">04 · Museum experience</p>
           <div className="caseStudyFeature">
             <div>
-              <h2>An interface designed as one part of a larger immersive system.</h2>
+              <h2>
+                An interface designed as one part of a larger immersive system.
+              </h2>
               <p>
                 The installation combined a curved full-wall projection,
                 multichannel sound, three futuristic vehicles, and the
@@ -163,7 +170,10 @@ export function FicSonPage() {
         <section className="caseStudySection">
           <p className="caseStudySectionLabel">05 · Outcome</p>
           <div className="caseStudyOutcome">
-            <h2>Playfulness and simplicity became design requirements, not decoration.</h2>
+            <h2>
+              Playfulness and simplicity became design requirements, not
+              decoration.
+            </h2>
             <div className="caseStudyProse">
               <p>
                 The thesis evaluation involved hearing-impaired pre-teenagers,
