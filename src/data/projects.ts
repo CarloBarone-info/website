@@ -19,8 +19,6 @@ export type Project = {
   isLocalProject?: boolean;
   section: ProjectSection;
   description: string;
-  impact: string;
-  tech: string[];
   link: string;
   image?: string;
   imageAlt?: string;
@@ -37,9 +35,6 @@ export const projects: Project[] = [
     description: "The GitHub work behind this portfolio and my other projects.",
     image: profilePortrait,
     imageAlt: "Portrait of Carlo Barone",
-    impact:
-      "Built this portfolio as a product in its own right, with responsive UI, testing, CI, and automated deployment, while using GitHub as the broader record of my technical work.",
-    tech: ["React", "TypeScript", "Vite", "Testing", "GitHub Actions"],
     link: "https://github.com/CarloBarone-info",
   },
   {
@@ -53,18 +48,6 @@ export const projects: Project[] = [
       "Accessible interaction design for speculative urban soundscapes.",
     image: ficsonImage,
     imageAlt: "FicSon installation at Tekniska Museet in Stockholm",
-    impact:
-      "The project was exhibited at Tekniska Museet in Stockholm and explored sound design through an accessibility-focused research process.",
-    tech: [
-      "Electronics",
-      "Pure Data",
-      "JavaScript",
-      "DIY fabrication",
-      "User-centered design",
-      "Sound design",
-      "Data sonification",
-      "Accessibility",
-    ],
     link: "https://carlobarone.wixsite.com/main-page/fictitious-soundscapes",
   },
   {
@@ -78,17 +61,6 @@ export const projects: Project[] = [
       "A tangible sonification prototype for indoor air-quality data.",
     image: hourglassFinalImage,
     imageAlt: "Finished Sonifying Hourglass prototype",
-    impact:
-      "Designed and built an interactive sonification prototype that was presented at the Sound and Music Computing Conference in 2022.",
-    tech: [
-      "Electronics",
-      "Pure Data",
-      "Arduino",
-      "DIY fabrication",
-      "User-centered design",
-      "Sound design",
-      "Data sonification",
-    ],
     link: "https://carlobarone.wixsite.com/main-page/sonifying-hourglass",
   },
   {
@@ -102,9 +74,6 @@ export const projects: Project[] = [
       "Two original film-scoring entries for animation and live action.",
     image: indieFilmImage,
     imageAlt: "Frame from the Indie Film Music Contest animation entry",
-    impact:
-      "Composed, produced, and submitted an original score for the 2026 competition.",
-    tech: ["Composition", "Sound Design", "Film Scoring"],
     link: "https://carlobarone.wixsite.com/main-page/indie-film-music-contest-2026",
   },
   {
@@ -117,9 +86,6 @@ export const projects: Project[] = [
       "Original compositions and arrangements across several genres.",
     image: museScoreImage,
     imageAlt: "MuseScore sheet-music preview artwork",
-    impact:
-      "Built a growing body of composition and arrangement work exploring harmony, orchestration, and musical structure across different genres.",
-    tech: ["Music theory", "MuseScore", "Pop music", "Classical music", "Jazz"],
     link: "https://musescore.com/user/59610958",
   },
 ];

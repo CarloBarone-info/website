@@ -14,8 +14,6 @@ export type CardProps = {
   image?: string;
   imageAlt?: string;
   imageFit?: "cover" | "contain";
-  impact?: string;
-  tech?: string[];
 };
 
 export type ProjectCardProps = {
