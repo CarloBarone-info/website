@@ -1,11 +1,10 @@
-import githubLogo from "../assets/projects/github-portfolio/github-logo.png";
+import profilePortrait from "../assets/profile-portrait.jpg";
 import hourglassFinalImage from "../assets/projects/sonifying-hourglass/final.png";
 
 const ficsonImage =
   "https://static.wixstatic.com/media/4ad051_b8d06067c0b44ed0901e5c71332e7f1a~mv2.jpg/v1/crop/x_0%2Cy_38%2Cw_960%2Ch_1204/fill/w_369%2Ch_463%2Cal_c%2Cq_80%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/TekniskaFicSon.jpg";
 
-const indieFilmImage =
-  "https://img.youtube.com/vi/MGvWJ39T7gQ/hqdefault.jpg";
+const indieFilmImage = "https://img.youtube.com/vi/MGvWJ39T7gQ/hqdefault.jpg";
 
 const museScoreImage =
   "https://musescore.com/static/public/img/musescore/footer_cards_ver1786377230.png";
@@ -35,10 +34,9 @@ export const projects: Project[] = [
     date: "2026–",
     isProject: true,
     section: "selected-work",
-    description: "This portfolio and the GitHub work behind it.",
-    image: githubLogo,
-    imageAlt: "GitHub logo",
-    imageFit: "contain",
+    description: "The GitHub work behind this portfolio and my other projects.",
+    image: profilePortrait,
+    imageAlt: "Portrait of Carlo Barone",
     impact:
       "Built this portfolio as a product in its own right, with responsive UI, testing, CI, and automated deployment, while using GitHub as the broader record of my technical work.",
     tech: ["React", "TypeScript", "Vite", "Testing", "GitHub Actions"],
@@ -51,7 +49,8 @@ export const projects: Project[] = [
     isProject: true,
     isLocalProject: true,
     section: "selected-work",
-    description: "Accessible interaction design for speculative urban soundscapes.",
+    description:
+      "Accessible interaction design for speculative urban soundscapes.",
     image: ficsonImage,
     imageAlt: "FicSon installation at Tekniska Museet in Stockholm",
     impact:
@@ -75,7 +74,8 @@ export const projects: Project[] = [
     isProject: true,
     isLocalProject: true,
     section: "selected-work",
-    description: "A tangible sonification prototype for indoor air-quality data.",
+    description:
+      "A tangible sonification prototype for indoor air-quality data.",
     image: hourglassFinalImage,
     imageAlt: "Finished Sonifying Hourglass prototype",
     impact:
@@ -98,7 +98,8 @@ export const projects: Project[] = [
     isProject: true,
     isLocalProject: true,
     section: "creative-practice",
-    description: "Two original film-scoring entries for animation and live action.",
+    description:
+      "Two original film-scoring entries for animation and live action.",
     image: indieFilmImage,
     imageAlt: "Frame from the Indie Film Music Contest animation entry",
     impact:
@@ -112,7 +113,8 @@ export const projects: Project[] = [
     date: "2023–",
     isProject: true,
     section: "creative-practice",
-    description: "Original compositions and arrangements across several genres.",
+    description:
+      "Original compositions and arrangements across several genres.",
     image: museScoreImage,
     imageAlt: "MuseScore sheet-music preview artwork",
     impact:
