@@ -1,4 +1,4 @@
-import profilePortrait from "../assets/profile-portrait.jpg";
+import githubLogo from "../assets/projects/github-portfolio/github-logo.png";
 import hourglassFinalImage from "../assets/projects/sonifying-hourglass/final.png";
 
 const ficsonImage =
@@ -36,8 +36,9 @@ export const projects: Project[] = [
     isProject: true,
     section: "selected-work",
     description: "This portfolio and the GitHub work behind it.",
-    image: profilePortrait,
-    imageAlt: "Portrait of Carlo Barone",
+    image: githubLogo,
+    imageAlt: "GitHub logo",
+    imageFit: "contain",
     impact:
       "Built this portfolio as a product in its own right, with responsive UI, testing, CI, and automated deployment, while using GitHub as the broader record of my technical work.",
     tech: ["React", "TypeScript", "Vite", "Testing", "GitHub Actions"],
