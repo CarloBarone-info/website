@@ -16,6 +16,27 @@ export function ContactPage() {
         <figcaption>Photo © Allan Kamuran</figcaption>
       </figure>
 
+      <section className="cvDownloads" aria-labelledby="cv-downloads-title">
+        <p className="eyebrow">Résumé</p>
+        <h2 id="cv-downloads-title">Download my CV</h2>
+        <div className="cvDownloadActions">
+          <a
+            className="button secondary"
+            href={`${import.meta.env.BASE_URL}cv/Carlo_Barone_CV_EN.pdf`}
+            download
+          >
+            English · PDF
+          </a>
+          <a
+            className="button secondary"
+            href={`${import.meta.env.BASE_URL}cv/Carlo_Barone_CV_SV.pdf`}
+            download
+          >
+            Svenska · PDF
+          </a>
+        </div>
+      </section>
+
       <ContactList />
     </div>
   );
