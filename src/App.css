@@ -239,7 +239,7 @@
 /* CV downloads */
 .cvDownloads {
   max-width: 720px;
-  margin: 0 auto 64px;
+  margin: 56px auto 64px;
   padding: 28px;
   border: 1px solid var(--border);
   border-radius: 24px;
