@@ -16,6 +16,7 @@ export function ContactPage() {
         <figcaption>Photo © Allan Kamuran</figcaption>
       </figure>
 
+
       <ContactList />
     </div>
   );

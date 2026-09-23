@@ -11,11 +11,13 @@ import { NeoviciProjectPage } from "./pages/projects/NeoviciProjectPage";
 import { KthProjectPage } from "./pages/projects/KthProjectPage";
 import { SideNav } from "./components/SideNav";
 import { BackToTop } from "./components/BackToTop";
+import { ScrollToTopOnNavigation } from "./components/ScrollToTopOnNavigation";
 
 function App() {
   return (
     <HashRouter>
       <SideNav />
+      <ScrollToTopOnNavigation />
       <BackToTop />
 
       <main className="page">
