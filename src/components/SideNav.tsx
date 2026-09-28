@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { NavIcon } from "./NavIcon";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function SideNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -127,8 +128,15 @@ export function SideNav() {
         </nav>
 
         <div className="sideNavFooter">
-          <p>Design · Engineering · Product</p>
-          <p>Stockholm, Sweden</p>
+          <div className="sideNavAppearance">
+            <span className="sideNavAppearanceLabel">Appearance</span>
+            <ThemeToggle tabIndex={isOpen ? 0 : -1} />
+          </div>
+
+          <div className="sideNavMeta">
+            <p>Design · Engineering · Product</p>
+            <p>Stockholm, Sweden</p>
+          </div>
         </div>
       </aside>
     </>
