@@ -8,7 +8,7 @@ export function ContactPage() {
       <PageHeader
         eyebrow="Contact"
         title="Let’s talk"
-        intro="If you’re working on a digital product, interface, or interaction challenge and think I could help, these are the best ways to reach me."
+        intro="Whether you are building a digital product, planning an event, or coordinating a team, I would be happy to talk."
       />
 
       <figure className="contactPortrait">
