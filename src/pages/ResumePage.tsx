@@ -8,8 +8,8 @@ const cvGroups = [
     description:
       "React, TypeScript, product development, and interaction design.",
     downloads: [
-      { label: "English PDF", filename: "Carlo_Barone_CV_EN.pdf" },
-      { label: "Svenska PDF", filename: "Carlo_Barone_CV_SV.pdf" },
+      { label: "English PDF", filename: "Carlo_Barone_Programming_CV_EN.pdf" },
+      { label: "Svenska PDF", filename: "Carlo_Barone_Programming_CV_SV.pdf" },
     ],
   },
   {
