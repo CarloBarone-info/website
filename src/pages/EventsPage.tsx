@@ -73,9 +73,10 @@ export function EventsPage() {
         <p className="eyebrow">Featured event · Overall coordinator</p>
         <h2 id="natom-title">A three-day music festival for Nordic technical universities</h2>
         <p className="eventFeatureLead">
-          For NATOM, I was the overall coordinator of a festival bringing together
-          six orchestras from Nordic technical universities. I coordinated the
-          organizing committee and kept the different workstreams aligned.
+          For NATOM, held on 13–15 November 2026, I was the overall coordinator
+          of a festival bringing together six orchestras from Nordic technical
+          universities. The committee prepared the event over approximately
+          18 months, and I helped keep its different workstreams aligned.
         </p>
 
         <dl className="eventStats">
@@ -88,8 +89,8 @@ export function EventsPage() {
             <dd>6</dd>
           </div>
           <div>
-            <dt>Event length</dt>
-            <dd>3 days</dd>
+            <dt>Dates</dt>
+            <dd>13–15 Nov 2026</dd>
           </div>
           <div>
             <dt>Budget</dt>
