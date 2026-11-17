@@ -118,6 +118,14 @@ export function SideNav() {
             Projects
           </NavLink>
           <NavLink
+            to="/events"
+            tabIndex={isOpen ? 0 : -1}
+            onClick={closeAfterNavigation}
+          >
+            <NavIcon name="events" />
+            Events & leadership
+          </NavLink>
+          <NavLink
             to="/contact"
             tabIndex={isOpen ? 0 : -1}
             onClick={closeAfterNavigation}
@@ -134,7 +142,7 @@ export function SideNav() {
           </div>
 
           <div className="sideNavMeta">
-            <p>Design · Engineering · Product</p>
+            <p>Design · Engineering · Events</p>
             <p>Stockholm, Sweden</p>
           </div>
         </div>

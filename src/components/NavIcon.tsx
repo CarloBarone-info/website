@@ -1,4 +1,4 @@
-export type NavIconName = "home" | "resume" | "projects" | "contact";
+export type NavIconName = "home" | "resume" | "projects" | "events" | "contact";
 
 type NavIconProps = {
   name: NavIconName;
@@ -41,6 +41,17 @@ export function NavIcon({ name }: NavIconProps) {
       return (
         <svg {...commonProps}>
           <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+        </svg>
+      );
+
+    case "events":
+      return (
+        <svg {...commonProps}>
+          <rect x="3" y="5" width="18" height="16" rx="2" />
+          <line x1="7" y1="3" x2="7" y2="7" />
+          <line x1="17" y1="3" x2="17" y2="7" />
+          <line x1="3" y1="10" x2="21" y2="10" />
+          <polyline points="8 15 11 18 16 13" />
         </svg>
       );
 

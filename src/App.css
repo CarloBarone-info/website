@@ -17,34 +17,25 @@
   }
 }
 
-/* Hero */
+/* Hero: a balanced introduction with an editorial portrait */
 .hero {
-  min-height: calc(100svh - 48px);
-  padding: clamp(88px, 12vh, 144px) 0 clamp(104px, 14vh, 168px);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  max-width: 1500px;
+  min-height: min(780px, calc(100svh - 48px));
+  max-width: 1240px;
   margin: 0 auto;
-  text-align: center;
+  padding: clamp(92px, 12vh, 124px) clamp(14px, 3vw, 42px) 80px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  align-items: center;
+  gap: clamp(32px, 5.5vw, 86px);
+  text-align: left;
 }
 
 .hero > * {
   animation: fadeUp 650ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-.hero > :nth-child(1) {
-  animation-delay: 60ms;
-}
-
-.hero > :nth-child(2) {
-  animation-delay: 140ms;
-}
-
-.hero > :nth-child(3) {
-  animation-delay: 220ms;
-}
+.hero > :nth-child(1) { animation-delay: 60ms; }
+.hero > :nth-child(2) { animation-delay: 150ms; }
 
 .eyebrow {
   margin: 0;
@@ -55,33 +46,102 @@
   font-weight: 700;
 }
 
+.heroCopy {
+  min-width: 0;
+}
+
+.heroEyebrow {
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
 .hero h1 {
-  max-width: 1200px;
-  margin: 0 auto;
-  font-size: clamp(3rem, 7vw, 6rem);
-  line-height: 1.04;
-  letter-spacing: -0.04em;
+  max-width: 790px;
+  margin: 0;
+  font-size: clamp(2.55rem, 4.3vw, 4.6rem);
+  line-height: 1.07;
+  letter-spacing: -0.047em;
 }
 
 .heroHeadline {
   display: block;
   margin-top: 16px;
+  font-size: 0.72em;
+  line-height: 1.15;
+  letter-spacing: -0.038em;
 }
 
-.intro {
-  max-width: 720px;
-  margin: 30px auto 0;
-  font-size: 1.2rem;
-  line-height: 1.58;
+.hero .intro {
+  max-width: 650px;
+  margin: 26px 0 0;
+  font-size: clamp(1rem, 1.45vw, 1.12rem);
+  line-height: 1.65;
   color: var(--text);
 }
 
 .heroActions {
   display: flex;
-  gap: 12px;
-  margin-top: 34px;
+  gap: 10px;
+  margin-top: 30px;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+.heroActions .button {
+  font-size: 0.88rem;
+  padding: 11px 16px;
+}
+
+.heroPortrait {
+  margin: 0;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: var(--accent-bg);
+  box-shadow: var(--shadow);
+}
+
+.heroPortrait img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 37%;
+  border-radius: 19px;
+}
+
+.heroPortrait figcaption {
+  margin: 11px 6px 1px;
+  color: var(--text);
+  font-size: 0.72rem;
+  text-align: right;
+}
+
+@media (max-width: 840px) {
+  .hero {
+    min-height: auto;
+    grid-template-columns: minmax(0, 1fr) minmax(205px, 0.63fr);
+    gap: 24px;
+    padding: 100px 8px 66px;
+  }
+
+  .hero h1 { font-size: clamp(2.15rem, 5vw, 3.4rem); }
+  .heroHeadline { font-size: 0.75em; }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    padding: 34px 0 72px;
+    text-align: center;
+  }
+
+  .heroEyebrow { margin-bottom: 14px; }
+  .hero h1 { font-size: clamp(2.6rem, 10vw, 3.7rem); }
+  .hero .intro { margin-inline: auto; }
+  .heroActions { justify-content: center; }
+  .heroPortrait { width: min(320px, 84%); margin: 0 auto; }
 }
 
 .button {
@@ -264,6 +324,85 @@
   justify-content: center;
   gap: 12px;
   margin-top: 24px;
+}
+
+/* Resume: two equally weighted CV tracks */
+.eventExperienceIntro {
+  max-width: 1000px;
+  margin: 50px auto 0;
+  padding: 30px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  gap: 28px;
+}
+
+.eventExperienceIntro h2 {
+  margin: 10px 0 12px;
+  color: var(--text-h);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.eventExperienceIntro p:not(.eyebrow) {
+  max-width: 610px;
+  line-height: 1.6;
+}
+
+.eventExperienceIntro .button { flex: 0 0 auto; }
+
+.cvDownloads {
+  max-width: 1000px;
+  margin: 50px auto 64px;
+  padding: clamp(24px, 4vw, 42px);
+}
+
+.cvDownloadsIntro {
+  max-width: 620px;
+  margin: 15px auto 0;
+  line-height: 1.6;
+}
+
+.cvDownloadGrid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  text-align: left;
+}
+
+.cvDownloadCard {
+  padding: clamp(22px, 3vw, 32px);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+}
+
+.cvDownloadCard h3 {
+  margin: 0;
+  color: var(--text-h);
+  font-size: 1.4rem;
+  letter-spacing: -0.03em;
+}
+
+.cvDownloadCard p {
+  margin: 12px 0 0;
+  line-height: 1.55;
+}
+
+.cvDownloadCard .cvDownloadActions {
+  justify-content: flex-start;
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+@media (max-width: 720px) {
+  .cvDownloadGrid { grid-template-columns: 1fr; }
+  .eventExperienceIntro { flex-direction: column; align-items: flex-start; }
 }
 
 /* Grids */

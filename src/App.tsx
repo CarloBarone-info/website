@@ -1,6 +1,8 @@
 import "./App.css";
+import "./styles/eventsPage.css";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
+import { EventsPage } from "./pages/EventsPage";
 import { ProjectsPage } from "./pages/ProjectsPage";
 import { ContactPage } from "./pages/ContactPage";
 import { ResumePage } from "./pages/ResumePage";
@@ -25,6 +27,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/resume" element={<ResumePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/events" element={<EventsPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route
             path="/projects/fictitious-soundscapes"
