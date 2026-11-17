@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { PageHeader } from "../components/PageHeader";
 import { ResumeList } from "../components/lists/ResumeList";
 
@@ -7,9 +8,19 @@ export function ResumePage() {
       <PageHeader
         eyebrow="Experience"
         title="Resumé"
-        intro="A snapshot of the roles, products, and teams that have shaped how I work across design, engineering, and digital product development."
+        intro="A snapshot of my work in frontend, UX, research, and the teams behind live music events."
       />
       <ResumeList />
+
+      <section className="cvDownloads" aria-labelledby="event-experience-title">
+        <p className="eyebrow">Beyond digital products</p>
+        <h2 id="event-experience-title">Events & leadership</h2>
+        <p style={{ margin: "14px auto 22px", maxWidth: "35rem", lineHeight: 1.6 }}>
+          I have organized concerts, a Nordic music festival for around 300 people,
+          and orchestra tours, while holding several leadership roles.
+        </p>
+        <Link to="/events" className="button secondary">Explore event work</Link>
+      </section>
 
       <section className="cvDownloads" aria-labelledby="cv-downloads-title">
         <p className="eyebrow">Résumé</p>
