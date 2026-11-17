@@ -4,10 +4,10 @@ import { PageHeader } from "../components/PageHeader";
 const otherEvents = [
   {
     role: "Concert organizer",
-    title: "Annual concerts for Stockholm's student orchestras",
+    title: "Annual concerts across three Stockholm student orchestras",
     period: "2021, 2023, 2024",
     description:
-      "Organized three joint concerts involving more than 150 performers and dancers each, with roughly 250 at the largest. All three met their financial targets or finished with a surplus. The teams and guests responded positively to the experience and manageable workload.",
+      "Organized an annual concert for each of three Stockholm student orchestras (2021, 2023 and 2024). Each event involved more than 150 people, with roughly 250 at the largest. All three met their budgets or finished with a surplus, and received positive feedback from guests and organizers.",
   },
   {
     role: "Lead organizer, then committee member",
