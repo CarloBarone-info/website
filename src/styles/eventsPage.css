@@ -171,7 +171,13 @@
   line-height: 1.6;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 900px) {
+  .eventFeature {
+    border-radius: 26px;
+  }
+  .eventSection {
+    margin-top: 72px;
+  }
   .eventStats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
