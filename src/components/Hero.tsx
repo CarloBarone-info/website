@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <section className="hero" aria-label="Introduction">
       <div className="heroCopy">
-        <p className="eyebrow heroEyebrow">Frontend · UX · Event coordination</p>
+        <p className="eyebrow heroEyebrow">Product design · UX · Frontend engineering</p>
         <h1>
           Hi, I’m Carlo.
           <span className="heroHeadline">
@@ -14,17 +14,17 @@ export function Hero() {
         </h1>
 
         <p className="intro">
-          I'm a frontend developer and UX designer with experience bringing
-          concerts, tours, and an international music festival to life.
-          Whether I'm creating an interface or coordinating people and
-          logistics, I care about making complex things work smoothly.
+          I’m a frontend developer and UX designer with a research background
+          in human-centred interaction design. I turn complex information into
+          understandable experiences, from financial software and accessible
+          museum interfaces to the teams behind live music events.
         </p>
 
         <div className="heroActions">
           <Link to="/resume" className="button secondary">
             Résumé
           </Link>
-          <Link to="/projects" className="button secondary">
+          <Link to="/projects" className="button">
             Projects
           </Link>
           <Link to="/events" className="button secondary">

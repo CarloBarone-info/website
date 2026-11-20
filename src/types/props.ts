@@ -14,6 +14,8 @@ export type CardProps = {
   image?: string;
   imageAlt?: string;
   imageFit?: "cover" | "contain";
+  disciplines?: readonly string[];
+  outcome?: string;
 };
 
 export type ProjectCardProps = {

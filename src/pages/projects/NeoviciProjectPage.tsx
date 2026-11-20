@@ -1,5 +1,7 @@
+import { CaseStudyOverview } from "../../components/CaseStudyOverview";
+import { CaseStudyNavigation } from "../../components/CaseStudyNavigation";
 import "../../styles/neoviciProjectPage.css";
-import { Link } from "react-router-dom";
+import { BackToProjects } from "../../components/BackToProjects";
 
 const cosmozHeroImage =
   "https://cdn.prod.website-files.com/612c779ad9c35386e150549b/6193adb686c1e914d27da4d0_reposition.png";
@@ -13,18 +15,14 @@ const cosmozProcessImage =
 export function NeoviciProjectPage() {
   return (
     <article className="neoviciCaseStudy">
-      <Link className="backToProjects" to="/resume">
-        <span aria-hidden="true">←</span>
-        Back to résumé
-      </Link>
+      <BackToProjects />
 
       <header className="neoviciHero">
         <div className="neoviciHeroCopy">
           <p className="neoviciEyebrow">Professional work · Neovici · 2023–2026</p>
           <h1>Neovici</h1>
           <p className="neoviciLead">
-            Frontend development and UX work on Cosmoz, Neovici&apos;s web-based
-            financial automation platform.
+            Designing and implementing usable interfaces for complex financial workflows in Cosmoz, Neovici&apos;s web-based automation platform.
           </p>
 
           <div className="neoviciActions">
@@ -63,24 +61,7 @@ export function NeoviciProjectPage() {
         </figure>
       </header>
 
-      <dl className="neoviciMeta" aria-label="Role overview">
-        <div>
-          <dt>Role</dt>
-          <dd>Frontend Developer & UX Designer</dd>
-        </div>
-        <div>
-          <dt>Product</dt>
-          <dd>Cosmoz financial automation platform</dd>
-        </div>
-        <div>
-          <dt>Stack</dt>
-          <dd>lit-html · Web Components · PionJS · React</dd>
-        </div>
-        <div>
-          <dt>Focus</dt>
-          <dd>UX · frontend · customer-driven product work</dd>
-        </div>
-      </dl>
+      <CaseStudyOverview slug="neovici" />
 
       <div className="neoviciBody">
         <aside
@@ -190,7 +171,19 @@ export function NeoviciProjectPage() {
         </section>
 
         <section className="neoviciSection">
-          <p className="neoviciSectionLabel">04 · Frontend stack</p>
+          <p className="neoviciSectionLabel">04 · Design decisions</p>
+          <h2>From a product request to a working interaction.</h2>
+          <p className="caseSectionLead">This is a summary of my recurring responsibilities, not a reconstruction of any particular confidential customer workflow.</p>
+          <ol className="caseProcess">
+            <li><strong>Understand the request</strong><p>Work with the project manager to understand the request and the underlying workflow.</p></li>
+            <li><strong>Reason about the interaction</strong><p>Consider the intended behaviour, established interface patterns, existing components and implementation constraints.</p></li>
+            <li><strong>Implement within the product</strong><p>Translate the interaction into frontend changes, collaborating with the team rather than treating design and code as separate concerns.</p></li>
+            <li><strong>Preserve continuity</strong><p>Consider how changes fit the mature product and its existing behaviour as components evolve.</p></li>
+          </ol>
+        </section>
+
+        <section className="neoviciSection">
+          <p className="neoviciSectionLabel">05 · Frontend stack</p>
           <h2>Web Components first, with different tools where they made sense.</h2>
 
           <div className="neoviciTechList" aria-label="Frontend technologies">
@@ -234,15 +227,14 @@ export function NeoviciProjectPage() {
         </section>
 
         <section className="neoviciSection">
-          <p className="neoviciSectionLabel">05 · Incremental modernisation</p>
+          <p className="neoviciSectionLabel">06 · Incremental modernisation</p>
 
           <div className="neoviciFeatureGrid neoviciFeatureGridReverse">
             <div>
               <h2>Modernising the frontend without making the migration the story.</h2>
               <div className="neoviciProse">
                 <p>
-                  Part of my work involved converting older Polymer-based areas
-                  toward newer Lit and Web Component patterns.
+                  I contributed to modernising a frontend with more than 100 UI components, converting older Polymer-based areas toward newer Lit and Web Component patterns. React was used in selected areas of the product.
                 </p>
                 <p>
                   The interesting part was the constraint: existing behaviour
@@ -267,7 +259,7 @@ export function NeoviciProjectPage() {
         </section>
 
         <section className="neoviciSection neoviciLearning">
-          <p className="neoviciSectionLabel">06 · What the role strengthened</p>
+          <p className="neoviciSectionLabel">07 · What the role strengthened</p>
           <div className="neoviciSplit">
             <h2>Design decisions get more interesting when the constraints are real.</h2>
             <div className="neoviciProse">
@@ -278,6 +270,7 @@ export function NeoviciProjectPage() {
                 I enjoy most: moving between the problem, the interaction, and
                 the code rather than treating them as separate stages.
               </p>
+              <p>I also developed my ability to explain technical trade-offs and support colleagues, including mentoring interns. I cannot publish proprietary screens, customer-specific examples or internal impact metrics; the public material here illustrates the product context rather than my individual designs.</p>
             </div>
           </div>
         </section>
@@ -326,6 +319,7 @@ export function NeoviciProjectPage() {
           </aside>
         </footer>
       </div>
+      <CaseStudyNavigation slug="neovici" />
     </article>
   );
 }

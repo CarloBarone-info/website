@@ -1,3 +1,5 @@
+import { CaseStudyOverview } from "../../components/CaseStudyOverview";
+import { CaseStudyNavigation } from "../../components/CaseStudyNavigation";
 import { BackToProjects } from "../../components/BackToProjects";
 
 const exhibitionImage =
@@ -10,10 +12,9 @@ export function FicSonPage() {
       <header className="caseStudyHero">
         <div className="caseStudyHeroCopy">
           <p className="caseStudyEyebrow">Master thesis · KTH · 2022</p>
-          <h1 style={{ fontSize: "7.5rem" }}>Fictitious Soundscapes</h1>
+          <h1>Fictitious Soundscapes</h1>
           <p className="caseStudyLead">
-            Designing an accessible interface for shaping fictitious futuristic
-            urban soundscapes in a museum setting.
+            Making complex sound manipulation accessible in an interactive museum experience for younger visitors and people with hearing impairments.
           </p>
 
           <div className="caseStudyActions">
@@ -43,24 +44,7 @@ export function FicSonPage() {
         </figure>
       </header>
 
-      <dl className="caseStudyMeta" aria-label="Project overview">
-        <div>
-          <dt>Role</dt>
-          <dd>Interface design, programming & experiment</dd>
-        </div>
-        <div>
-          <dt>Context</dt>
-          <dd>KTH master thesis · NAVET research project</dd>
-        </div>
-        <div>
-          <dt>Focus</dt>
-          <dd>HCI · Accessibility · Sound design</dd>
-        </div>
-        <div>
-          <dt>Outcome</dt>
-          <dd>Interactive museum exhibition</dd>
-        </div>
-      </dl>
+      <CaseStudyOverview slug="fictitious-soundscapes" />
 
       <div className="caseStudyBody">
         <section className="caseStudySection caseStudyIntroSection">
@@ -110,7 +94,8 @@ export function FicSonPage() {
             Three vehicles. Three circles. As little explanation as possible.
           </h2>
 
-          <div className="ficsonInteraction">
+          <figure className="ficsonInteractionFigure">
+          <div className="ficsonInteraction" aria-hidden="true">
             <div className="ficsonCircle" aria-hidden="true">
               <span>01</span>
             </div>
@@ -122,6 +107,8 @@ export function FicSonPage() {
             </div>
           </div>
 
+          <figcaption className="caseFigureCaption">Conceptual illustration of the three interaction areas; not a screenshot of the original touchscreen.</figcaption>
+          </figure>
           <div className="caseStudyProse caseStudyProseWide">
             <p>
               Visitors interacted with three coloured circles on a touchscreen,
@@ -168,13 +155,16 @@ export function FicSonPage() {
         </section>
 
         <section className="caseStudySection">
-          <p className="caseStudySectionLabel">05 · Outcome</p>
+          <p className="caseStudySectionLabel">05 · Evaluation &amp; outcome</p>
           <div className="caseStudyOutcome">
             <h2>
               Playfulness and simplicity became design requirements, not
               decoration.
             </h2>
             <div className="caseStudyProse">
+              <p>
+                I evaluated the interface across three phases, combining observations and qualitative feedback with quantitative data. The evaluation included a group of 14 pupils and other museum and hearing-impaired participants. This allowed the research to consider both how visitors used the interface and whose perspectives it included.
+              </p>
               <p>
                 The thesis evaluation involved hearing-impaired pre-teenagers,
                 museum visitors, and additional hearing-impaired testers. The
@@ -189,6 +179,15 @@ export function FicSonPage() {
                 affected by those design decisions.
               </p>
             </div>
+          </div>
+        </section>
+
+        <section className="caseStudySection">
+          <p className="caseStudySectionLabel">06 · Reflection</p>
+          <h2>Design for participation, not just presentation.</h2>
+          <div className="caseStudyProse">
+            <p>In a shared museum environment, the interaction has to be discoverable without a long onboarding flow. The touchscreen, physical overlay and projected scene illustrate how constraints can help make an experience more approachable.</p>
+            <p>The evaluation was specific to this installation and its participants; it does not establish accessibility for every user. For future work, I would test discoverability and feedback with a wider range of visitors and compare interaction alternatives more explicitly.</p>
           </div>
         </section>
 
@@ -219,6 +218,7 @@ export function FicSonPage() {
           </div>
         </footer>
       </div>
+      <CaseStudyNavigation slug="fictitious-soundscapes" />
     </article>
   );
 }
