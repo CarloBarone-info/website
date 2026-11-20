@@ -117,7 +117,7 @@
   text-align: right;
 }
 
-@media (max-width: 840px) {
+@media (max-width: 900px) {
   .hero {
     min-height: auto;
     grid-template-columns: minmax(0, 1fr) minmax(205px, 0.63fr);
@@ -400,7 +400,7 @@
   padding-top: 24px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 900px) {
   .cvDownloadGrid { grid-template-columns: 1fr; }
   .eventExperienceIntro { flex-direction: column; align-items: flex-start; }
 }
