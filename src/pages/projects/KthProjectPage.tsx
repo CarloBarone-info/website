@@ -1,54 +1,46 @@
 import { Link } from "react-router-dom";
-
-const kthOverviewImage =
-  "https://static.wixstatic.com/media/4ad051_b8d06067c0b44ed0901e5c71332e7f1a~mv2.jpg/v1/crop/x_0%2Cy_38%2Cw_960%2Ch_1204/fill/w_369%2Ch_463%2Cal_c%2Cq_80%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/TekniskaFicSon.jpg";
+import { ProjectCollection } from "../../components/ProjectCollection";
+import { selectedWork } from "../../data/projects";
 
 export function KthProjectPage() {
   return (
-    <article className="projectPage kthPage">
+    <article className="projectPage kthPage educationPage">
       <Link className="backToProjects" to="/resume">
-        <span aria-hidden="true">←</span>
-        Back to résumé
+        <span aria-hidden="true">←</span> Back to résumé
       </Link>
-
       <header className="projectHeader">
-        <p className="caseStudyEyebrow">Research & teaching · KTH · 2020–2022</p>
-        <h1>KTH</h1>
-        <p className="projectSubtitle">
-          Research, teaching assistance, and interaction-design work around
-          sound, accessibility, data sonification, and interactive media.
-        </p>
+        <p className="caseStudyEyebrow">KTH · 2020–2022</p>
+        <h1>Research, education &amp; interaction design</h1>
+        <p className="projectSubtitle">My work at KTH combined interactive media research, teaching assistance and the design and evaluation of experiences that make complex information understandable.</p>
       </header>
 
-      <figure className="kthOverviewMedia">
-        <img
-          src={kthOverviewImage}
-          alt="FicSon installation at Tekniska Museet, developed during KTH work"
-        />
-        <figcaption>
-          FicSon at Tekniska Museet — one of the public projects connected to my
-          KTH work.
-        </figcaption>
-      </figure>
-
-      <section className="projectParagraph">
-        <h2>Current public material</h2>
-        <div className="projectText">
-          <p>
-            This page is a lightweight overview for now. The KTH work already
-            documented in this portfolio includes my master&apos;s thesis project
-            FicSon and the Sonifying Hourglass research prototype.
-          </p>
-
-          <div className="caseStudyActions">
-            <Link to="/projects/fictitious-soundscapes">
-              View FicSon case study →
-            </Link>
-            <Link to="/projects/sonifying-hourglass">
-              View Sonifying Hourglass →
-            </Link>
-          </div>
-        </div>
+      <section className="educationHighlights" aria-label="KTH experience">
+        <article>
+          <p className="eyebrow">Education</p>
+          <h2>MSc in Interactive Media Technology</h2>
+          <p>Master’s studies in interaction, media technology and human-centred design, completed in 2022.</p>
+        </article>
+        <article>
+          <p className="eyebrow">Teaching</p>
+          <h2>Teaching assistant</h2>
+          <p>Alongside my academic work I gained firsthand experience of education as a teaching assistant at KTH. I value the challenge of communicating complex ideas clearly and making learning approachable.</p>
+        </article>
+        <article>
+          <p className="eyebrow">Research</p>
+          <h2>Published interaction research</h2>
+          <p>Co-authored a conference paper investigating how a tangible interface can make indoor air quality perceptible through sound.</p>
+          <a href="https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1647647" target="_blank" rel="noreferrer">View publication record ↗</a>
+        </article>
+      </section>
+      <ProjectCollection
+        title="Research case studies"
+        description="Two examples of developing an interactive prototype, evaluating the experience with participants and communicating the findings."
+        items={selectedWork.filter((project) => project.slug !== "neovici")}
+      />
+      <section className="educationReflection">
+        <h2>What connects research, teaching and product design?</h2>
+        <p>All three depend on understanding the people an experience is designed for. I bring that perspective to digital products: clarifying complex information, considering different abilities, and using evidence to guide design decisions.</p>
+        <Link className="button secondary" to="/projects">Explore all projects</Link>
       </section>
     </article>
   );

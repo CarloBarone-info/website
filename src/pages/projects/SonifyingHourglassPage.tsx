@@ -1,3 +1,5 @@
+import { CaseStudyOverview } from "../../components/CaseStudyOverview";
+import { CaseStudyNavigation } from "../../components/CaseStudyNavigation";
 import "../../styles/sonifyingHourglassPage.css";
 import { BackToProjects } from "../../components/BackToProjects";
 import sketchImage from "../../assets/projects/sonifying-hourglass/sketch.jpg";
@@ -79,26 +81,9 @@ export function SonifyingHourglassPage() {
         </figure>
       </header>
 
-      <dl className="hourglassMeta" aria-label="Project overview">
-        <div>
-          <dt>Role</dt>
-          <dd>Interaction, prototyping, sound & research</dd>
-        </div>
-        <div>
-          <dt>Medium</dt>
-          <dd>Physical computing + sonification</dd>
-        </div>
-        <div>
-          <dt>Tools</dt>
-          <dd>Arduino · Pure Data · sensors</dd>
-        </div>
-        <div>
-          <dt>Outcome</dt>
-          <dd>Published at SMC 2022</dd>
-        </div>
-      </dl>
+      <CaseStudyOverview slug="sonifying-hourglass" />
 
-      <main className="hourglassBody">
+      <div className="hourglassBody">
         <section className="hourglassSection">
           <p className="hourglassSectionLabel">01 · The problem</p>
           <h2>Air quality is important, but mostly invisible.</h2>
@@ -221,6 +206,7 @@ export function SonifyingHourglassPage() {
               src="https://www.youtube.com/embed/hyWIo960J7M?start=1"
               title="The Sonifying Hourglass prototype demonstration"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              loading="lazy"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
             />
@@ -229,6 +215,11 @@ export function SonifyingHourglassPage() {
 
         <section className="hourglassSection">
           <p className="hourglassSectionLabel">06 · Evaluation</p>
+          <dl className="caseEvidence" aria-label="Study design">
+            <div><dt>Participants</dt><dd>8</dd></div>
+            <div><dt>Sound models</dt><dd>4</dd></div>
+            <div><dt>Air-quality levels</dt><dd>3</dd></div>
+          </dl>
           <div className="hourglassOutcome">
             <h2>Clarity alone was not enough.</h2>
             <div className="hourglassProse">
@@ -247,6 +238,16 @@ export function SonifyingHourglassPage() {
               </p>
             </div>
           </div>
+          <div className="caseComparison" aria-label="Reported evaluation findings">
+            <h3>What the comparison showed</h3>
+            <ul>
+              <li><strong>Abstract:</strong> Effective communication of air quality.</li>
+              <li><strong>Musical:</strong> Effective communication and a preferred sonic experience.</li>
+              <li><strong>Concrete:</strong> Effective communication and a preferred sonic experience.</li>
+              <li><strong>Cultural:</strong> Less effective interpretation in this study.</li>
+            </ul>
+            <p>These are qualitative summaries of the reported findings, not individual model scores or statistically generalisable claims.</p>
+          </div>
         </section>
 
         <section className="hourglassSection hourglassLearning">
@@ -255,6 +256,9 @@ export function SonifyingHourglassPage() {
             A data interface can be understandable and still be unpleasant.
           </h2>
           <div className="hourglassProse">
+            <p>
+              My contribution was part of a collaborative research project with Rod Selfridge and Sandra Pauletto. The prototype and published findings reflect the team’s work.
+            </p>
             <p>
               The study exposed a useful design tension: a sound can communicate
               a value clearly while still feeling too alarming, tiring, or
@@ -295,7 +299,8 @@ export function SonifyingHourglassPage() {
             </a>
           </div>
         </footer>
-      </main>
+      </div>
+      <CaseStudyNavigation slug="sonifying-hourglass" />
     </article>
   );
 }
