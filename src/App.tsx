@@ -1,5 +1,6 @@
 import "./App.css";
 import "./styles/eventsPage.css";
+import "./styles/portfolioCaseStudies.css";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { EventsPage } from "./pages/EventsPage";

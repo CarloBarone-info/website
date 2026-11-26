@@ -1,8 +1,5 @@
-import {
-  creativePractice,
-  selectedWork,
-} from "../../data/projects";
-import { Card } from "../Card";
+import { creativePractice, engineeringWork, selectedWork } from "../../data/projects";
+import { ProjectCollection } from "../ProjectCollection";
 import { PageHeader } from "../PageHeader";
 
 export function ProjectList() {
@@ -11,41 +8,25 @@ export function ProjectList() {
       <PageHeader
         eyebrow="Portfolio"
         title="Projects & practice"
-        intro="A collection of professional, research, and creative work spanning digital products, interaction design, accessibility, sound, and code."
+        intro="Professional product development, research-led interaction design, engineering and creative work."
       />
-
-      <section className="projectSection projectSectionDesign">
-        <div className="projectSectionHeader">
-          <h2>Design &amp; Engineering</h2>
-          <p>
-            Case studies and builds that show how I frame problems, prototype
-            interactions, make technical trade-offs, and turn ideas into
-            working digital experiences.
-          </p>
-        </div>
-
-        <div className="projectsGrid">
-          {selectedWork.map((project) => (
-            <Card key={project.slug} {...project} />
-          ))}
-        </div>
-      </section>
-
-      <section className="projectSection projectSectionCreative">
-        <div className="projectSectionHeader">
-          <h2>Creative Practice</h2>
-          <p>
-            Composition, sound, and experimental work that shapes how I think
-            about perception, storytelling, rhythm, and interaction.
-          </p>
-        </div>
-
-        <div className="projectsGrid">
-          {creativePractice.map((project) => (
-            <Card key={project.slug} {...project} />
-          ))}
-        </div>
-      </section>
+      <ProjectCollection
+        title="Selected design work"
+        description="Case studies about real product constraints, inclusive interactions and experimentally evaluated design alternatives."
+        items={selectedWork}
+      />
+      <ProjectCollection
+        title="Engineering"
+        description="Code, technical experiments and the implementation behind working experiences."
+        items={engineeringWork}
+        variant="engineering"
+      />
+      <ProjectCollection
+        title="Creative practice"
+        description="Composition, sound and experimental work that shape how I think about perception, storytelling and interaction."
+        items={creativePractice}
+        variant="creative"
+      />
     </div>
   );
 }

@@ -79,6 +79,8 @@ export function Card({
   image,
   imageAlt,
   imageFit = "cover",
+  disciplines,
+  outcome,
 }: CardProps) {
   const isExternalLink = link?.startsWith("http");
 
@@ -108,11 +110,17 @@ export function Card({
       {isProject && (
         <>
           <h3>{title}</h3>
-          <h4 className="date">{date}</h4>
+          {date && <p className="date">{date}</p>}
           {description && <p className="cardSummary">{description}</p>}
+          {disciplines && (
+            <ul className="projectDisciplines" aria-label="Disciplines">
+              {disciplines.map((discipline) => <li key={discipline}>{discipline}</li>)}
+            </ul>
+          )}
+          {outcome && <p className="projectOutcome">{outcome}</p>}
           <div className="cardActions">
             {isLocalProject ? (
-              <Link className="cardCta cardCtaPrimary" to={`/projects/${slug}`}>
+              <Link className="cardCta cardCtaPrimary" to={`/projects/${slug}`} aria-label={`View case study: ${title}`}>
                 View case study
               </Link>
             ) : (
@@ -133,7 +141,7 @@ export function Card({
       {isExperience && (
         <>
           <h3>{title}</h3>
-          <h4 className="date">{date}</h4>
+          {date && <p className="date">{date}</p>}
           {description && <p className="cardSummary">{description}</p>}
           <div className="cardActions">
             {projectPath && (
